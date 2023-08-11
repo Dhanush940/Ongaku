@@ -40,7 +40,8 @@ router.post("/create-user", async (req, res, next) => {
     };
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    // const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `https://ongaaku.netlify.app/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -119,12 +120,10 @@ router.post(
       // console.log("User with select password", user);
 
       if (!user) {
-        res
-          .status(400)
-          .json({
-            success: false,
-            message: "User doesn't exist in our databse",
-          });
+        res.status(400).json({
+          success: false,
+          message: "User doesn't exist in our databse",
+        });
         return next(new ErrorHandler("User doesn't exists!", 400));
       }
 

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
-import { server } from "../server";
+import { backend_server } from "../server";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { loadSongs } from "../redux/actions/song";
@@ -26,7 +26,7 @@ const SongPopup = ({ create, setCreate }) => {
 
     axios
       .post(
-        `${server}/song/create-song`,
+        `${backend_server}/song/create-song`,
         store,
         { withCredentials: true }
         // If not mentioned, cookies and all will not be passed to in the req object

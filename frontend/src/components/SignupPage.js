@@ -3,7 +3,7 @@ import { LiaSpotify } from "react-icons/lia";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import { server } from "../server";
+import { backend_server } from "../server";
 import { toast } from "react-toastify";
 import axios from "axios";
 const SignupPage = () => {
@@ -15,7 +15,12 @@ const SignupPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
-      .post(`${server}/user/create-user`, { name, email, password, avatar })
+      .post(`${backend_server}/user/create-user`, {
+        name,
+        email,
+        password,
+        avatar,
+      })
       .then((res) => {
         // console.log("res:" + res);
         toast.success(res.data.message);

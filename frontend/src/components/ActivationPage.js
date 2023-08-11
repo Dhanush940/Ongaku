@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { server } from "../server";
+import { backend_server } from "../server";
 import toast from "react-toastify";
 
 const ActivationPage = () => {
@@ -14,7 +14,7 @@ const ActivationPage = () => {
     if (activation_token) {
       const sendRequest = async () => {
         await axios
-          .post(`${server}/user/activation`, {
+          .post(`${backend_server}/user/activation`, {
             activation_token,
           })
           .then((res) => {

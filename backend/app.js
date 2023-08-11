@@ -3,10 +3,11 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-
+const ErrorHandler = require("./middleware/error");
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
+    origin: "https://ongaaku.netlify.app",
     credentials: true,
   })
 );
@@ -31,5 +32,5 @@ const song = require("./controller/song");
 
 app.use("/api/v2/user", user);
 app.use("/api/v2/song", song);
-
+app.use(ErrorHandler);
 module.exports = app;

@@ -4,7 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { server } from "../server";
+import { backend_server } from "../server";
 import { toast } from "react-toastify";
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const LoginPage = () => {
     e.preventDefault();
     await axios
       .post(
-        `${server}/user/login-user`,
+        `${backend_server}/user/login-user`,
         {
           email,
           password,

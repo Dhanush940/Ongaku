@@ -1,12 +1,12 @@
 import axios from "axios";
-import { server } from "../../server";
+import { backend_server } from "../../server";
 
 export const loadSongs = () => async (dispatch) => {
   try {
     dispatch({
       type: "LoadSongsRequest",
     });
-    const res = await axios.get(`${server}/song/getSongs`, {
+    const res = await axios.get(`${backend_server}/song/getSongs`, {
       withCredentials: true,
     });
     // console.log("Data is : ", res);
