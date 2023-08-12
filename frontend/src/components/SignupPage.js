@@ -50,7 +50,7 @@ const SignupPage = () => {
         <Link to="/">
           {" "}
           <div className="flex items-center mt-1.5">
-            <SiMusicbrainz size={50} color="white" />
+            <SiMusicbrainz size={40} color="white" />
             <span className="font-extrabold text-white text-2xl">Ongaku</span>
           </div>
         </Link>

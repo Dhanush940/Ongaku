@@ -41,7 +41,7 @@ const LoginPage = () => {
         <Link to="/">
           {" "}
           <div className="flex items-center mt-1.5">
-            <SiMusicbrainz size={50} color="white" />
+            <SiMusicbrainz size={40} color="white" />
             <span className="font-extrabold text-white text-2xl">Ongaku</span>
           </div>
         </Link>
@@ -49,7 +49,7 @@ const LoginPage = () => {
 
       <div className="py-12">
         <h1 className="mt-4 text-center text-white font-bold text-3xl ">
-          Login to Spotify
+          Login to Ongaku
         </h1>
 
         <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
