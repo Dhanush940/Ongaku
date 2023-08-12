@@ -6,6 +6,7 @@ const sendJWTToken = (user, statusCode, res) => {
     httpOnly: true,
     sameSite: "none",
     secure: true,
+    path: "/",
   };
   res.status(statusCode).cookie("UserToken", token, options).json({
     success: true,
