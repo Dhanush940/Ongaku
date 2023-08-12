@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LiaSpotify } from "react-icons/lia";
+import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
@@ -41,8 +41,8 @@ const LoginPage = () => {
         <Link to="/">
           {" "}
           <div className="flex items-center mt-1.5">
-            <LiaSpotify size={50} color="white" />
-            <span className="font-extrabold text-white text-2xl">Spotify</span>
+            <SiMusicbrainz size={50} color="white" />
+            <span className="font-extrabold text-white text-2xl">Ongaku</span>
           </div>
         </Link>
       </div>
