@@ -63,4 +63,29 @@ router.get("/getSongs", isAuthenticated, async (req, res, next) => {
     console.log(err);
   }
 });
+
+router.delete("/deleteSong/:id", isAuthenticated, async (req, res, next) => {
+  try {
+    const user = await User.findById(req.user._id);
+    if (!user) {
+      res.status(400).json({ success: false, message: "User doesn't exist" });
+      return next(new ErrorHandler("User doesn't exists!", 400));
+    }
+    // console.log("Id is :", req.params.id);
+
+    const deletedSong = await Song.findByIdAndDelete(req.params.id);
+
+    let Image = `spotifySongImages/${deletedSong.image.split("/")[8]}`;
+    Image = Image.substring(0, Image.lastIndexOf("."));
+
+    let song = `spotifySongs/${deletedSong.song.split("/")[8]}`;
+    song = song.substring(0, song.lastIndexOf("."));
+
+    await cloudinary.v2.uploader.destroy(Image);
+    await cloudinary.v2.uploader.destroy(song, { resource_type: "video" });
+    return res.status(200).json({ success: true, deletedSong });
+  } catch (err) {
+    console.log(err);
+  }
+});
 module.exports = router;
