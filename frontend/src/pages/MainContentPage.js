@@ -8,10 +8,10 @@ import UserSong from "../components/UserSong";
 const MainContentPage = () => {
   const { user, isAuthenticated, loading } = useSelector((state) => state.user);
   const { songs } = useSelector((state) => state.songs);
-  console.log("MainContentPage");
+  // console.log("MainContentPage");
 
   return (
-    <div className="w-[75%] my-2 mr-1  rounded-md bg-[#1f1f1f] overflow-y-auto relative ">
+    <div className="w-[80%] sm:w-[75%] my-2 mr-1  rounded-md bg-[#1f1f1f] overflow-y-auto relative ">
       <div className="bg-stone-400 p-4 flex justify-between items-center w-full sticky ">
         <div className="flex">
           <AiOutlineLeft size={20} color="white" />

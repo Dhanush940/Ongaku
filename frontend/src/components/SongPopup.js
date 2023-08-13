@@ -63,7 +63,7 @@ const SongPopup = ({ create, setCreate }) => {
 
   return (
     <div className="fixed left-0 top-0 w-screen h-screen flex justify-center items-center z-50 bg-[#181616da]">
-      <div className="bg-black   w-1/2 lg:w-1/3 h-4/5 rounded-md px-6 py-2 relative ">
+      <div className="bg-black w-full sm:w-7/12 md:w-1/3  h-4/5 rounded-md px-6 py-2 relative ">
         <h1 className="text-white text-center text-2xl my-2">Add a song</h1>
 
         <RxCross1
@@ -99,7 +99,7 @@ const SongPopup = ({ create, setCreate }) => {
             />
           </div>
           <div>
-            <span className="block text-white my-2">Uplaod an mp3 file</span>
+            <span className="block text-white my-2">Upload an mp3 file</span>
             <div>
               <input
                 type="file"
@@ -126,7 +126,7 @@ const SongPopup = ({ create, setCreate }) => {
             type="submit"
             className="bg-green-500 rounded-full h-10 w-full 
             hover:bg-green-400
-            active:translate-y-1"
+            active:scale-50"
           >
             Create
           </button>

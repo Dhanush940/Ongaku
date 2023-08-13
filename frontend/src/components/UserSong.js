@@ -8,7 +8,7 @@ const UserSong = () => {
   // useEffect(() => {
   // console.log("Refreshing usersong due to change in currentSong in homepage");
   // });
-  console.log("Refreshing usersong due to change in currentSong in homepage");
+  // console.log("Refreshing usersong due to change in currentSong in homepage");
 
   return (
     <>

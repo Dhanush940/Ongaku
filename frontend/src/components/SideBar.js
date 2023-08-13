@@ -12,30 +12,37 @@ const SideBar = () => {
   const [click, setClick] = useState(false);
   const [create, setCreate] = useState(false);
   const { isAuthenticated } = useSelector((state) => state.user);
-  console.log("Sidebar");
+  // console.log("Sidebar");
   return (
-    <div className="flex flex-col gap-2 w-[25%] my-2">
+    <div className="flex flex-col gap-2   w-[20%] sm:w-[25%] my-2">
       <div className="h-[20%] bg-[#1f1f1f]  rounded-md p-3 flex flex-col justify-between">
         <Link to="/">
           <div className="flex w-full gap-3 items-center">
             <AiOutlineHome size={20} color="white" />
-            <p className="text-white mt-1"> Home</p>
+            <p className="text-white mt-1 sm:block hidden"> Home</p>
           </div>
         </Link>
         <Link to="/search">
           <div className="flex w-full gap-3 items-center">
             <BsSearchHeartFill size={20} color="white" />
-            <p className="text-white mt-1"> Search</p>
+            <p className="text-white mt-1 hidden sm:block"> Search</p>
           </div>
         </Link>
       </div>
       <div className="h-[80%] bg-[#1f1f1f]  rounded-md">
         <div className="h-full bg-[#1f1f1f] rounded-md p-3 flex flex-col gap-6 ">
           {/* <Link to="/"> */}
-          <div className="flex">
-            <div className="flex w-full gap-3">
-              <MdQueueMusic size={30} color="white" />
-              <p className="text-white mt-1 hidden md:block"> Your Library</p>
+          <div className="flex justify-between">
+            <div className="hidden sm:block ">
+              <div className="flex gap-3 w-full ">
+                {" "}
+                <MdQueueMusic
+                  size={30}
+                  color="white"
+                  className=" sm:block hidden"
+                />
+                <p className="text-white mt-1 hidden md:block"> Your Library</p>
+              </div>
             </div>
             <div className="relative">
               <AiOutlinePlus

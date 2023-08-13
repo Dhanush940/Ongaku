@@ -1,32 +1,21 @@
 import React, { useEffect } from "react";
-
-import { AiOutlineLeft } from "react-icons/ai";
-import { AiOutlineRight } from "react-icons/ai";
-
-import { Link } from "react-router-dom";
-
 import { useDispatch, useSelector } from "react-redux";
-
-import UserSong from "./UserSong";
-
 import { removeFromStorage } from "../redux/actions/songStorage";
-
 import SongPlayer from "./SongPlayer";
 import Loader from "./Layout/Loader";
 import SideBar from "./SideBar";
-import Guest from "./Guest";
+
 import MainContentPage from "../pages/MainContentPage";
 
 const HomePage = () => {
-  const { user, isAuthenticated, loading } = useSelector((state) => state.user);
-  const { songs } = useSelector((state) => state.songs);
+  const { loading } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { currentSong } = useSelector((state) => state.storage);
-  console.log(
-    "CurrentSong duration",
-    currentSong?.duration,
-    typeof currentSong?.duration
-  );
+  // console.log(
+  //   "CurrentSong duration",
+  //   currentSong?.duration,
+  //   typeof currentSong?.duration
+  // );
 
   useEffect(() => {
     // console.log("currentSong refreshing");
@@ -42,15 +31,15 @@ const HomePage = () => {
   // };
 
   window.onbeforeunload = function () {
-    // console.log("Refresh");
+    console.log("Refresh");
     // if (window.location.href == sessionStorage.getItem("origin")) {
-    dispatch(removeFromStorage());
     // }
-  };
 
-  // h-[${
-  //             currentSong?.duration !== undefined ? 90 : 100
-  //           }vh]
+    dispatch(removeFromStorage());
+
+    // console.log("currentSong doesn't exist");
+    return null;
+  };
 
   return (
     <>

@@ -11,12 +11,14 @@ import Store from "./redux/store";
 import { loadUser } from "./redux/actions/user";
 import { useDispatch } from "react-redux";
 import { loadSongs } from "./redux/actions/song";
+import { removeFromStorage } from "./redux/actions/songStorage";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadUser());
     Store.dispatch(loadSongs());
+    // dispatch(removeFromStorage());
   }, []);
   return (
     <BrowserRouter>
