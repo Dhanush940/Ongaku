@@ -1,5 +1,6 @@
 import axios from "axios";
 import { backend_server } from "../../server";
+import { updatePlaylistsSongs } from "./playlist";
 
 export const loadSongs = () => async (dispatch) => {
   try {
@@ -33,13 +34,16 @@ export const deleteSongFromDatabase = (id) => async (dispatch, getState) => {
         withCredentials: true,
       }
     );
+    // console.log(data.playlists);
 
     // console.log(res);If you try to access variables that are not in this scope or rather defined , immediately catch will be triggered
-    console.log("State is :", getState());
+
     dispatch({
       type: "DeleteSongSuccess",
       payload: data?.deletedSong,
     });
+
+    dispatch(updatePlaylistsSongs(data.playlists));
   } catch (error) {
     dispatch({
       type: "DeleteSongFail",

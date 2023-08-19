@@ -121,7 +121,7 @@ const LoginPage = () => {
                     {""} Remember me
                   </label>
                 </div>
-                <Link to="/forgot-password">
+                <Link to="/forgotPassword">
                   <span className="text-blue-600">Forgot your password?</span>
                 </Link>
               </div>

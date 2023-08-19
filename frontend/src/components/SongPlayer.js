@@ -8,8 +8,8 @@ import { FaPause, FaPlay } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import { TbRewindBackward5, TbRewindForward5 } from "react-icons/tb";
 import OutsideClickHandler from "react-outside-click-handler";
-const SongPlayer = () => {
-  const { songs } = useSelector((state) => state.songs);
+const SongPlayer = ({ songs }) => {
+  // const { songs } = useSelector((state) => state.songs);
   const { currentSong } = useSelector((state) => state.storage);
   const [play, setPlay] = useState(false);
   const [timeChange, setTimeChange] = useState(false);
@@ -129,7 +129,7 @@ const SongPlayer = () => {
             ></audio>
           </div>
 
-          <div className="flex flex-col gap-1 justify-evenly ">
+          <div className="flex flex-col gap-1 flex-1 justify-evenly ">
             <div className="flex gap-3 items-center mx-auto">
               {" "}
               <ImPrevious2 size={30} onClick={previousSong} />
@@ -204,7 +204,7 @@ const SongPlayer = () => {
                     onChange={volumeCapture}
                     className="w-32"
                   />
-                  {console.log(volume)}
+                  {/* {console.log(volume)} */}
                   <span className="ml-2 text-lg">
                     {Math.round(volume * 100)}
                   </span>

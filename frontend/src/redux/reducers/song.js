@@ -23,6 +23,7 @@ export const songReducer = createReducer(initialState, {
   DeleteSongSuccess: (state, action) => {
     state.deleteLoading = false;
     state.songs = state.songs.filter((item) => item._id !== action.payload._id);
+
     state.deleteError = false;
   },
   DeleteSongFail: (state, action) => {

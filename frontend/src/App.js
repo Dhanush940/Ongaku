@@ -2,6 +2,7 @@ import HomePage from "./components/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignupPage from "./components/SignupPage";
 import LoginPage from "./components/LoginPage";
+
 import ForgotPasswordPage from "./components/ForgotPasswordPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; //doesn't look good at all if you don't import css
@@ -12,12 +13,18 @@ import { loadUser } from "./redux/actions/user";
 import { useDispatch } from "react-redux";
 import { loadSongs } from "./redux/actions/song";
 import { removeFromStorage } from "./redux/actions/songStorage";
+import PlaylistPage from "./pages/PlaylistPage";
+import SpecificPlaylist from "./components/SpecificPlaylist";
+import { getPlaylists } from "./redux/actions/playlist";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadUser());
     Store.dispatch(loadSongs());
+    Store.dispatch(getPlaylists());
     // dispatch(removeFromStorage());
   }, []);
   return (
@@ -40,11 +47,16 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/sign-up" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
+        {/* <Route path="/profile" element={<ProfilePage />} /> */}
         <Route
           path="/activation/:activation_token"
           element={<ActivationPage />}
         />
-        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/forgotPassword" element={<ForgotPasswordPage />} />
+        <Route path="/resetPassword/:token" element={<ResetPasswordPage />} />
+
+        <Route path="/playlists" element={<PlaylistPage />} />
+        <Route path="/playlist/:id" element={<SpecificPlaylist />} />
       </Routes>
       <ToastContainer
         position="bottom-center"

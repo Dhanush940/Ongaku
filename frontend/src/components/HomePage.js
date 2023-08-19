@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromStorage } from "../redux/actions/songStorage";
 import SongPlayer from "./SongPlayer";
@@ -11,6 +11,8 @@ const HomePage = () => {
   const { loading } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { currentSong } = useSelector((state) => state.storage);
+  const { songs } = useSelector((state) => state.songs);
+  // const [mount, setMount] = useState(true);
   // console.log(
   //   "CurrentSong duration",
   //   currentSong?.duration,
@@ -21,6 +23,13 @@ const HomePage = () => {
     // console.log("currentSong refreshing");
     // setPlay(true)
   }, [currentSong]);
+
+  useEffect(() => {
+    return () => {
+      dispatch(removeFromStorage());
+      // console.log("unmounting");
+    };
+  }, []);
 
   // useEffect(() => {
   //   console.log("Because of currentSong songs is also refreshed");
@@ -58,7 +67,7 @@ const HomePage = () => {
             <MainContentPage />
           </div>
 
-          {currentSong?.duration && <SongPlayer />}
+          {currentSong?.duration && <SongPlayer songs={songs} />}
         </div>
       )}
     </>

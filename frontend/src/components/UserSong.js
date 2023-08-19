@@ -13,7 +13,7 @@ const UserSong = () => {
   return (
     <>
       <div
-        className={`flex flex-wrap gap-1 justify-center sm:justify-between lg:justify-normal`}
+        className={`flex flex-wrap gap-1 justify-center sm:justify-between lg:justify-normal mt-3 `}
       >
         {songs.map((item, index) => {
           // console.log("index is :" + index);

@@ -3,13 +3,29 @@ import { LiaSpotify } from "react-icons/lia";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { backend_server } from "../server";
+import { SiMusicbrainz } from "react-icons/si";
+import { toast } from "react-toastify";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
 
-  const [fullname, setFullName] = useState("");
+  const [fullName, setFullName] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    axios
+      .post(
+        `${backend_server}/user/forgotPassword`,
+        { fullName, email },
+        { withCredentials: true }
+      )
+      .then(({ data }) => {
+        setEmail("");
+        setFullName("");
+        toast.success(data.message);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -17,11 +33,9 @@ const LoginPage = () => {
       <div className="w-screen h-screen  bg-gray-600">
         <div className="h-[10vh] bg-black pl-12 flex">
           <Link to="/">
-            <div className="flex items-center mt-1.5">
-              <LiaSpotify size={50} color="white" />
-              <span className="font-extrabold text-white text-2xl">
-                Spotify
-              </span>
+            <div className="flex items-center mt-2.5">
+              <SiMusicbrainz size={40} color="white" />
+              <span className="font-extrabold text-white text-2xl">Ongaku</span>
             </div>
           </Link>
         </div>
@@ -36,7 +50,7 @@ const LoginPage = () => {
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label
-                    htmlFor="fullname"
+                    htmlFor="fullName"
                     className="block text-sm font-medium text-white"
                   >
                     Full Name
@@ -44,9 +58,9 @@ const LoginPage = () => {
                   <div className="mt-1 relative">
                     <input
                       type="text"
-                      name="fullname"
+                      name="fullName"
                       required
-                      value={fullname}
+                      value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       className="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm placeholder-gray-800 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm 
                   focus:border-4

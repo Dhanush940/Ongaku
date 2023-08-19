@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 const ErrorHandler = require("./middleware/error");
 app.use(
   cors({
-    // origin: "http://localhost:3000",
-    origin: "https://ongaaku.netlify.app",
+    origin: "http://localhost:3000",
+    // origin: "https://ongaaku.netlify.app",
     credentials: true,
   })
 );
@@ -29,8 +29,10 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 const user = require("./controller/user");
 const song = require("./controller/song");
+const playlist = require("./controller/playlist");
 
 app.use("/api/v2/user", user);
 app.use("/api/v2/song", song);
+app.use("/api/v2/playlist", playlist);
 app.use(ErrorHandler);
 module.exports = app;

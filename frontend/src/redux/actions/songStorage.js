@@ -22,7 +22,7 @@ export const addToStorage = (data) => async (dispatch, getState) => {
 export const removeFromStorage = () => async (dispatch, getState) => {
   try {
     // console.log("Item is ", da);goes to catch block as da is not found
-    console.log("From remove Storage");
+    // console.log("From remove Storage");
     dispatch({
       type: "removeFromStorageSong",
     });

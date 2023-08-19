@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const User = require("../model/user");
 const Song = require("../model/song");
+const Playlist = require("../model/playlist");
 const router = express.Router();
 const cloudinary = require("cloudinary");
 const { isAuthenticated } = require("../middleware/auth");
@@ -33,7 +34,7 @@ router.post("/create-song", isAuthenticated, async (req, res, next) => {
     // for (let key in myCloudSongs)
     //   console.log(`Key is ${key} , Value is ${myCloudSongs[key]}`);
     // console.log("MyCloudSong", JSON.stringify(myCloudSongs));
-    console.log("Duration is :", typeof myCloudSongs.duration);
+    // console.log("Duration is :", typeof myCloudSongs.duration);
     //Number
 
     const songDetails = {
@@ -71,7 +72,6 @@ router.delete("/deleteSong/:id", isAuthenticated, async (req, res, next) => {
       res.status(400).json({ success: false, message: "User doesn't exist" });
       return next(new ErrorHandler("User doesn't exists!", 400));
     }
-    // console.log("Id is :", req.params.id);
 
     const deletedSong = await Song.findByIdAndDelete(req.params.id);
 
@@ -83,7 +83,14 @@ router.delete("/deleteSong/:id", isAuthenticated, async (req, res, next) => {
 
     await cloudinary.v2.uploader.destroy(Image);
     await cloudinary.v2.uploader.destroy(song, { resource_type: "video" });
-    return res.status(200).json({ success: true, deletedSong });
+
+    const playlists = await Playlist.find();
+
+    playlists.map(async (x, index) => {
+      x.playlistSongs = x.playlistSongs.filter((y) => y._id !== req.params.id);
+      await playlists[index].save();
+    });
+    return res.status(200).json({ success: true, deletedSong, playlists });
   } catch (err) {
     console.log(err);
   }

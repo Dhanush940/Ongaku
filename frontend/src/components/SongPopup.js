@@ -62,8 +62,8 @@ const SongPopup = ({ create, setCreate }) => {
   };
 
   return (
-    <div className="fixed left-0 top-0 w-screen h-screen flex justify-center items-center z-50 bg-[#181616da]">
-      <div className="bg-black w-full sm:w-7/12 md:w-1/3  h-4/5 rounded-md px-6 py-2 relative ">
+    <div className="fixed left-0 top-0 w-screen h-screen flex justify-center items-center z-50 bg-[#181616da]  ">
+      <div className="bg-black w-full sm:w-7/12  md:w-[62%] lg:w-[50%] xl:w-1/3  h-fit rounded-md px-6 py-2 relative  ">
         <h1 className="text-white text-center text-2xl my-2">Add a song</h1>
 
         <RxCross1
@@ -73,7 +73,7 @@ const SongPopup = ({ create, setCreate }) => {
           onClick={() => setCreate(false)}
         />
 
-        <form className="space-y-7 " onSubmit={(e) => handleSubmit(e)}>
+        <form className="space-y-3 " onSubmit={(e) => handleSubmit(e)}>
           <div>
             <input
               type="text"
@@ -122,14 +122,15 @@ const SongPopup = ({ create, setCreate }) => {
               ref={imageRef}
             />
           </div>
-          <button
-            type="submit"
-            className="bg-green-500 rounded-full h-10 w-full 
-            hover:bg-green-400
-            active:scale-50"
-          >
-            Create
-          </button>
+          <div>
+            <button
+              type="submit"
+              className="bg-green-500 rounded-full h-10 w-full 
+            hover:bg-green-400 active:scale-95 "
+            >
+              Create
+            </button>
+          </div>
         </form>
       </div>
     </div>
