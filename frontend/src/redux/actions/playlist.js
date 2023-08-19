@@ -169,6 +169,6 @@ export const removeSongFromPlaylist =
         payload: { updatedPlaylist: data.updatedPlaylist },
       });
     } catch (err) {
-      conosle.log(err);
+      console.log(err);
     }
   };
