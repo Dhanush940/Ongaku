@@ -34,8 +34,8 @@ router.post("/create-user", async (req, res, next) => {
     };
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
-    // const activationUrl = `https://ongaaku.netlify.app/activation/${activationToken}`;
+    // const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `https://ongaaku.netlify.app/activation/${activationToken}`;
 
     try {
       await sendMail({
@@ -200,7 +200,8 @@ router.post("/forgotPassword", async (req, res, next) => {
     );
     const resetToken = createActivationToken({ email, fullName });
 
-    const resetUrl = `http://localhost:3000/resetPassword/${resetToken}`;
+    // const resetUrl = `http://localhost:3000/resetPassword/${resetToken}`;
+    const resetUrl = `https://ongaaku.netlify.app/resetPassword/${resetToken}`;
     // console.log(jwt.verify(token, process.env.ACTIVATION_SECRET));
 
     await sendMail({

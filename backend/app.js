@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 const ErrorHandler = require("./middleware/error");
 app.use(
   cors({
-    origin: "http://localhost:3000",
-    // origin: "https://ongaaku.netlify.app",
+    // origin: "http://localhost:3000",
+    origin: "https://ongaaku.netlify.app",
     credentials: true,
   })
 );
