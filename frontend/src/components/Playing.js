@@ -22,7 +22,6 @@ const Playing = ({ play, audioRef, time, setTime }) => {
           onChange={(e) => {
             setTime(e.target.value);
             audioRef.current.currentTime = Number(e.target.value);
-            //   console.log(e.target.value);
           }}
           className="  w-20 sm:w-60"
         />

@@ -8,7 +8,6 @@ const connectDatabase = () => {
     })
     .then((data) => {
       console.log(`Mongod connected with server:${data.connection.host}`);
-      //   console.log(data);
     })
     .catch((err) => {
       console.log("Mongod Failed to connection" + err);

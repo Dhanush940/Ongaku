@@ -6,7 +6,6 @@ import { backend_server } from "../server";
 import toast from "react-toastify";
 
 const ActivationPage = () => {
-  //   console.log(useParams());
   const { activation_token } = useParams();
   const [error, setError] = useState(false);
 
@@ -17,9 +16,7 @@ const ActivationPage = () => {
           .post(`${backend_server}/user/activation`, {
             activation_token,
           })
-          .then((res) => {
-            // console.log(res);
-          })
+          .then((res) => {})
           .catch((err) => {
             setError(true);
           });

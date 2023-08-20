@@ -1,25 +1,13 @@
 import React from "react";
-import SideBar from "../components/SideBar";
 import { useDispatch, useSelector } from "react-redux";
 import PlaylistSideBar from "./PlaylistSideBar";
 import PlaylistContentPage from "./PlaylistContentPage";
 import { removeFromStorage } from "../redux/actions/songStorage";
 
 const PlaylistPage = () => {
-  // const { loading } = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const { currentSong } = useSelector((state) => state.storage);
-
-  // useEffect(() => {
-  //   // console.log("currentSong refreshing");
-  //   // setPlay(true)
-  // }, [currentSong]);
-
   window.onbeforeunload = function () {
-    // console.log("Refresh");
-
     dispatch(removeFromStorage());
-
     return null;
   };
   return (

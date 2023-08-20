@@ -21,9 +21,6 @@ const SongPlayer = ({ songs }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // console.log("currentSong refreshing");
-    // console.log(currentSong);
-
     setPlay(true);
   }, [currentSong]);
 
@@ -63,7 +60,6 @@ const SongPlayer = ({ songs }) => {
         return currentIndex;
       }
     });
-    // console.log(" song is :", previousSongObject);
   };
 
   const nextSong = () => {
@@ -87,7 +83,6 @@ const SongPlayer = ({ songs }) => {
         return currentIndex;
       }
     });
-    // console.log(" song is :", nextSongObject);
   };
   return (
     <div className="fixed w-screen h-16 left-0 bottom-0 bg-blue-300 filter blur-[0.4px] rounded-lg p-1 mb-2 ">
@@ -204,7 +199,7 @@ const SongPlayer = ({ songs }) => {
                     onChange={volumeCapture}
                     className="w-32"
                   />
-                  {/* {console.log(volume)} */}
+
                   <span className="ml-2 text-lg">
                     {Math.round(volume * 100)}
                   </span>

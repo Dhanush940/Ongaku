@@ -10,11 +10,8 @@ const ErrorHandler = require("../utils/ErrorHandler");
 
 router.post("/create-song", isAuthenticated, async (req, res, next) => {
   try {
-    // console.log(req.user);
-    // console.log(req.body);
     const { title, name, song, image } = req.body;
     const user = await User.findById(req.user._id);
-    // console.log(user);
     if (!user) {
       res.status(400).json({ success: false, message: "User doesn't exist" });
       return next(new ErrorHandler("User doesn't exists!", 400));
@@ -22,21 +19,10 @@ router.post("/create-song", isAuthenticated, async (req, res, next) => {
     const myCloudImages = await cloudinary.v2.uploader.upload(req.body.image, {
       folder: "spotifySongImages",
     });
-    // console.log("MycloudImages:");
-    // for (let key in myCloudImages)
-    //   console.log(`Key is ${key} , Value is ${myCloudImages[key]}`);
     const myCloudSongs = await cloudinary.v2.uploader.upload(req.body.song, {
       folder: "spotifySongs",
       resource_type: "auto",
     });
-
-    // console.log("MycloudSongs");
-    // for (let key in myCloudSongs)
-    //   console.log(`Key is ${key} , Value is ${myCloudSongs[key]}`);
-    // console.log("MyCloudSong", JSON.stringify(myCloudSongs));
-    // console.log("Duration is :", typeof myCloudSongs.duration);
-    //Number
-
     const songDetails = {
       title,
       name,
@@ -58,7 +44,6 @@ router.get("/getSongs", isAuthenticated, async (req, res, next) => {
       return next(new ErrorHandler("User doesn't exists!", 400));
     }
     const songs = await Song.find({ "user._id": req.user._id });
-    // console.log(songs);
     return res.status(200).json({ success: true, songs });
   } catch (err) {
     console.log(err);
@@ -72,15 +57,11 @@ router.delete("/deleteSong/:id", isAuthenticated, async (req, res, next) => {
       res.status(400).json({ success: false, message: "User doesn't exist" });
       return next(new ErrorHandler("User doesn't exists!", 400));
     }
-
     const deletedSong = await Song.findByIdAndDelete(req.params.id);
-
     let Image = `spotifySongImages/${deletedSong.image.split("/")[8]}`;
     Image = Image.substring(0, Image.lastIndexOf("."));
-
     let song = `spotifySongs/${deletedSong.song.split("/")[8]}`;
     song = song.substring(0, song.lastIndexOf("."));
-
     await cloudinary.v2.uploader.destroy(Image);
     await cloudinary.v2.uploader.destroy(song, { resource_type: "video" });
 

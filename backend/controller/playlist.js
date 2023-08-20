@@ -13,16 +13,11 @@ router.post("/createPlaylist", isAuthenticated, async (req, res, next) => {
       res.status(400).json({ success: false, message: "User doesn't exist" });
       return next(new ErrorHandler("User doesn't exists!", 400));
     }
-
-    // console.log("req.body is :", req.body);
-
     const playlistDetails = {
       name: req.body.playlistName,
       userId: req.user._id,
     };
-    // console.log("playlist details:", playlistDetails);
     const playlist = await Playlist.create(playlistDetails);
-    // console.log(playlist);
     res.status(200).json({ success: true, playlist });
   } catch (err) {
     console.log(err);
@@ -49,14 +44,11 @@ router.delete(
   isAuthenticated,
   async (req, res, next) => {
     try {
-      // console.log("Deleteplaylist routr.delete");
-      // console.log(req.body);
       const user = await User.findById(req.user?._id);
       if (!user) {
         res.status(400).json({ success: false, message: "User doesn't exist" });
         return next(new ErrorHandler("User doesn't exists!", 400));
       }
-
       const deletedPlaylist = await Playlist.findByIdAndDelete(req.params.id);
       return res.status(200).json({ success: true, deletedPlaylist });
     } catch (err) {
@@ -72,9 +64,7 @@ router.post("/addSongs", isAuthenticated, async (req, res, next) => {
       res.status(400).json({ success: false, message: "User doesn't exist" });
       return next(new ErrorHandler("User doesn't exists!", 400));
     }
-
     const { filteredSongs, playlist } = req.body;
-    // console.log("adfasf", playlist);
     const findPlaylist = await Playlist.findById(playlist._id);
     let filteredPlaylist;
     findPlaylist.playlistSongs = [
@@ -106,12 +96,9 @@ router.patch("/renamePlaylist", isAuthenticated, async (req, res, next) => {
       res.status(400).json({ success: false, message: "User doesn't exist" });
       return next(new ErrorHandler("User doesn't exists!", 400));
     }
-    // console.log(req.body.playlist.name, req.body.name);
     const findPlaylist = await Playlist.findById(req.body.playlist._id);
-    // console.log(findPlaylist);
     findPlaylist.name = req.body.name;
     await findPlaylist.save();
-    // console.log(findPlaylist);
     res.status(200).json({ success: true, updatedPlaylist: findPlaylist });
   } catch (err) {
     console.log(err);
@@ -132,15 +119,11 @@ router.patch(
         res.status(400).json({ success: false, message: "User doesn't exist" });
         return next(new ErrorHandler("User doesn't exists!", 400));
       }
-
       const findPlaylist = await Playlist.findById(req.body.playlistId);
-
       findPlaylist.playlistSongs = findPlaylist.playlistSongs.filter(
         (item) => item._id !== req.body.songToBeRemoved._id
       );
-
       await findPlaylist.save();
-      // console.log(findPlaylist);
       res.status(200).json({ success: true, updatedPlaylist: findPlaylist });
     } catch (err) {
       console.log(err);

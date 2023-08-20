@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { RxAvatar } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { backend_server } from "../server";
@@ -9,10 +8,9 @@ import { toast } from "react-toastify";
 const LoginPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
-
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
-  const [avatar, setAvatar] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios
@@ -26,7 +24,6 @@ const LoginPage = () => {
       )
       .then((res) => {
         toast.success("Login Success!");
-        // console.log(res);
         navigate("/");
         window.location.reload(true);
       })

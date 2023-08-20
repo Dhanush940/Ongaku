@@ -112,8 +112,6 @@ router.post(
       }
 
       const user = await User.findOne({ email }).select("+password");
-      // console.log("User with select password", user);
-
       if (!user) {
         res.status(400).json({
           success: false,
@@ -186,7 +184,7 @@ router.get(
 router.post("/forgotPassword", async (req, res, next) => {
   try {
     const { fullName, email } = req.body;
-    // console.log(fullName, email);
+
     const user = await User.find({ email });
     if (!user) {
       res.status(400).json({ success: false, message: "User doesn't exist" });
@@ -202,7 +200,6 @@ router.post("/forgotPassword", async (req, res, next) => {
 
     // const resetUrl = `http://localhost:3000/resetPassword/${resetToken}`;
     const resetUrl = `https://ongaaku.netlify.app/resetPassword/${resetToken}`;
-    // console.log(jwt.verify(token, process.env.ACTIVATION_SECRET));
 
     await sendMail({
       email: email,
@@ -223,16 +220,15 @@ router.post("/forgotPassword", async (req, res, next) => {
 router.post("/resetPassword", async (req, res, next) => {
   try {
     const { password, token, generatedPassword } = req.body;
-    // console.log(password, generatedPassword);
+
     const decryptEmail = jwt.verify(token, process.env.ACTIVATION_SECRET);
-    // console.log(decryptEmail);
+
     const user = await User.findOne({ email: decryptEmail.email });
     if (!user) {
       res.status(400).json({ success: false, message: "User doesn't exist" });
       return next(new ErrorHandler("User doesn't exists", 400));
     }
-    // console.log(user);
-    // console.log(user.resetPasswordToken, generatedPassword);
+
     if (user.resetPasswordToken !== generatedPassword) {
       res
         .status(400)
@@ -245,7 +241,6 @@ router.post("/resetPassword", async (req, res, next) => {
     res
       .status(200)
       .json({ success: true, message: "Password changed successfully" });
-    // console.log("done");
   } catch (err) {
     console.log(err.message);
     if ((err.message = "jwt expired")) {

@@ -22,7 +22,6 @@ const SignupPage = () => {
         avatar,
       })
       .then((res) => {
-        // console.log("res:" + res);
         toast.success(res.data.message);
         setName("");
         setEmail("");

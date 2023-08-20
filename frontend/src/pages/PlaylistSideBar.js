@@ -17,8 +17,6 @@ const PlaylistSideBar = () => {
   const { loadingFetchPlaylists, playlists } = useSelector(
     (state) => state.playlist
   );
-  // console.log("Sidebar");
-  // console.log(id);
   return (
     <div className="flex flex-col gap-2 w-[20%] sm:w-[25%] my-2">
       <div className="h-[20%] bg-[#1f1f1f]  rounded-md p-1.5 sm:p-3 flex flex-col justify-between">
@@ -59,10 +57,7 @@ const PlaylistSideBar = () => {
                 size={22}
                 color="white"
                 className=""
-                onClick={
-                  () => setCreate(!create)
-                  //  || console.log("In sidebar")
-                }
+                onClick={() => setCreate(!create)}
                 title="Add Songs"
               />
 

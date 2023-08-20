@@ -10,7 +10,7 @@ export const loadSongs = () => async (dispatch) => {
     const res = await axios.get(`${backend_server}/song/getSongs`, {
       withCredentials: true,
     });
-    // console.log("Data is : ", res);
+
     dispatch({
       type: "LoadSongsSuccess",
       payload: res?.data?.songs,
@@ -34,9 +34,6 @@ export const deleteSongFromDatabase = (id) => async (dispatch, getState) => {
         withCredentials: true,
       }
     );
-    // console.log(data.playlists);
-
-    // console.log(res);If you try to access variables that are not in this scope or rather defined , immediately catch will be triggered
 
     dispatch({
       type: "DeleteSongSuccess",

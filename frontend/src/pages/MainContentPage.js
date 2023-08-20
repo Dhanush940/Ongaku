@@ -12,7 +12,7 @@ const MainContentPage = () => {
   const [showLogoutDiv, setShowLogoutDiv] = useState(false);
   const { user, isAuthenticated, loading } = useSelector((state) => state.user);
   const { songs } = useSelector((state) => state.songs);
-  // console.log("MainContentPage");
+
   const navigate = useNavigate();
   const logoutHandler = () => {
     axios

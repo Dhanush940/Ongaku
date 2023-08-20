@@ -15,7 +15,6 @@ const ResetPasswordPage = () => {
   const [visibleConfirmPassword, setVisibleConfirmPassword] = useState(false);
 
   const { token } = useParams();
-  // console.log(token);
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password != confirmPassword) {

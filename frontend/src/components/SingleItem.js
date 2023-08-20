@@ -17,7 +17,6 @@ const SingleItem = ({ item, index, playlists }) => {
   return (
     <>
       <div className="p-2 m-2 mt-4 relative" key={index}>
-        {/* {console.log("Item :", item)} */}
         <div
           className={`flex flex-col bg-[#151515] p-3 w-40 h-64 text-white rounded-lg hover:bg-[rgba(97,79,79,0.64)] relative group `}
           onMouseEnter={() => setHover(true)}
@@ -55,7 +54,6 @@ const SingleItem = ({ item, index, playlists }) => {
                         name: item.name,
                       })
                     );
-                  // console.log("clicked");
                 }}
               >
                 <FaPlay size={25} color="black" />
@@ -77,17 +75,13 @@ const SingleItem = ({ item, index, playlists }) => {
           {/* Homepage song deletion .Playlists by default will be undefined as i am not sending any prop from home page*/}
 
           {!playlists && deleteSong && (
-            <div
-              className="absolute top-20 left-5 "
-              // onClick={() => console.log("Hello")}
-            >
+            <div className="absolute top-20 left-5 ">
               Are you sure you want to delete
               <div className="flex gap-10 mt-3">
                 <div
                   onClick={() => {
                     dispatch(deleteSongFromDatabase(item._id));
                     if (currentSong?.song === item.song) {
-                      // console.log("ABout to remove");
                       dispatch(removeFromStorage());
                     }
                     dispatch(loadSongs());
@@ -102,7 +96,6 @@ const SingleItem = ({ item, index, playlists }) => {
                   </div>
                 </div>
 
-                {/* becuase of active class on div we have to click on the text to make it scale down and not on the div .THat is the reason why i enclosed it in another div */}
                 <div onClick={() => setDeleteSong(false)}>
                   <div
                     className=" bg-slate-500 w-10 h-10  rounded-full
@@ -119,17 +112,13 @@ const SingleItem = ({ item, index, playlists }) => {
 
           {/* Playlist song removal */}
           {playlists && deleteSong && (
-            <div
-              className="absolute top-20 left-5 "
-              // onClick={() => console.log("Hello")}
-            >
+            <div className="absolute top-20 left-5 ">
               Are you sure you want to remove?
               <div className="flex gap-10 mt-3">
                 <div
                   onClick={() => {
                     dispatch(removeSongFromPlaylist(id, item));
                     if (currentSong?.song === item.song) {
-                      // console.log("ABout to remove");
                       dispatch(removeFromStorage());
                     }
                     dispatch(loadSongs());
@@ -144,7 +133,6 @@ const SingleItem = ({ item, index, playlists }) => {
                   </div>
                 </div>
 
-                {/* becuase of active class on div we have to click on the text to make it scale down and not on the div .THat is the reason why i enclosed it in another div */}
                 <div onClick={() => setDeleteSong(false)}>
                   <div
                     className=" bg-slate-500 w-10 h-10  rounded-full

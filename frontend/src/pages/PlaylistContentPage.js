@@ -41,8 +41,7 @@ const PlaylistContentPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getPlaylists()); //calling remaing getplaylists in actions see createplaylist
-    // console.log("inuseeffect");
+    dispatch(getPlaylists());
   }, []);
 
   const validateUserInput = (inputString) => {
@@ -62,7 +61,6 @@ const PlaylistContentPage = () => {
         numbersArray.push(parsedNumber);
       }
     }
-    // console.log([...new Set(numbersArray)].sort((a, b) => a - b));
 
     return [...new Set(numbersArray)].sort((a, b) => a - b);
   };
@@ -140,7 +138,6 @@ const PlaylistContentPage = () => {
               onClick={() => {
                 setCreatePlaylistDialogue(!createPlaylistDialogue);
                 setInputValue("Untitled Playlist");
-                // console.log("clicked");
               }}
             >
               <AiOutlinePlus size={20} color="black" className="mt-0.5" />
@@ -172,7 +169,6 @@ const PlaylistContentPage = () => {
                     // dispatch(getPlaylists());
                     setCreatePlaylistDialogue(false);
                     setInputValue("");
-                    // console.log("cli");
                   }}
                 >
                   <button className="hover:cursor-default">
@@ -193,7 +189,6 @@ const PlaylistContentPage = () => {
                     onMouseOver={() => setHoverOverDiv(index)}
                     onMouseOut={() => setHoverOverDiv(-1)}
                   >
-                    {/* {console.log("Item :", item)} */}
                     <div
                       className={`flex flex-col bg-[#151515] p-1 w-40 h-40 text-white rounded-sm  group relative`}
                     >
@@ -276,9 +271,8 @@ const PlaylistContentPage = () => {
                             ) : (
                               <div
                                 className="flex gap-2 items-center "
-                                onClick={
-                                  () => setCurrentPlaylistToAddSongsTo(index)
-                                  // console.log(currentPlaylistToAddSongsTo)
+                                onClick={() =>
+                                  setCurrentPlaylistToAddSongsTo(index)
                                 }
                               >
                                 <BiSolidRename size={25} />

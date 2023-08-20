@@ -18,11 +18,6 @@ const SongPopup = ({ create, setCreate }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("store is:" + store);
-    // for (let key in store) {
-    //   console.log(`Key :${key},Value :${store[key]}`);
-    // }
-    // console.log({ ...store });
 
     axios
       .post(
@@ -47,9 +42,8 @@ const SongPopup = ({ create, setCreate }) => {
   };
 
   const handleFileChange = (e) => {
-    // console.log(e.target.files);
     const reader = new FileReader();
-    // console.log(e.target.accept.includes("audio"));
+
     reader.onload = () => {
       if (e.target.accept.includes("audio") && reader.readyState === 2) {
         setStore({ ...store, song: reader.result });
@@ -57,7 +51,7 @@ const SongPopup = ({ create, setCreate }) => {
         setStore({ ...store, image: reader.result });
       }
     };
-    // console.log(e.target.files.length);
+
     e.target.files.length > 0 && reader.readAsDataURL(e.target.files[0]);
   };
 

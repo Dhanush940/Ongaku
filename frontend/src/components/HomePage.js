@@ -12,41 +12,17 @@ const HomePage = () => {
   const dispatch = useDispatch();
   const { currentSong } = useSelector((state) => state.storage);
   const { songs } = useSelector((state) => state.songs);
-  // const [mount, setMount] = useState(true);
-  // console.log(
-  //   "CurrentSong duration",
-  //   currentSong?.duration,
-  //   typeof currentSong?.duration
-  // );
 
-  useEffect(() => {
-    // console.log("currentSong refreshing");
-    // setPlay(true)
-  }, [currentSong]);
+  useEffect(() => {}, [currentSong]);
 
   useEffect(() => {
     return () => {
       dispatch(removeFromStorage());
-      // console.log("unmounting");
     };
   }, []);
 
-  // useEffect(() => {
-  //   console.log("Because of currentSong songs is also refreshed");
-  // }, [songs]);
-
-  // window.onbeforeunload = function () {
-  //   sessionStorage.setItem("origin", window.location.href);
-  // };
-
   window.onbeforeunload = function () {
-    console.log("Refresh");
-    // if (window.location.href == sessionStorage.getItem("origin")) {
-    // }
-
     dispatch(removeFromStorage());
-
-    // console.log("currentSong doesn't exist");
     return null;
   };
 

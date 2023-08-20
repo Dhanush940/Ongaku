@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { LiaSpotify } from "react-icons/lia";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { RxAvatar } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { backend_server } from "../server";
