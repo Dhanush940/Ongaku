@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
-import { backend_server } from "../server";
+import { backend_server } from "../config";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { loadSongs } from "../redux/actions/song";

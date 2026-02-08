@@ -1,5 +1,5 @@
 import axios from "axios";
-import { backend_server } from "../../server";
+import { backend_server } from "../../config";
 
 export const loadUser = () => async (dispatch) => {
   try {

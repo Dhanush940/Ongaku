@@ -1,5 +1,5 @@
 import axios from "axios";
-import { backend_server } from "../../server";
+import { backend_server } from "../../config";
 import { toast } from "react-toastify";
 
 export const createPlaylist = (playlistName) => async (dispatch) => {
