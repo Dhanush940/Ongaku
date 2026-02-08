@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { backend_server } from "../server";
+import { backend_server } from "../config";
 import toast from "react-toastify";
 
 const ActivationPage = () => {

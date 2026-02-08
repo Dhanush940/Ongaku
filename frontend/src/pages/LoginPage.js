@@ -3,7 +3,7 @@ import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { backend_server } from "../server";
+import { backend_server } from "../config";
 import { toast } from "react-toastify";
 const LoginPage = () => {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { backend_server } from "../server";
+import { backend_server } from "../config";
 import { SiMusicbrainz } from "react-icons/si";
 import { toast } from "react-toastify";
 const ResetPasswordPage = () => {

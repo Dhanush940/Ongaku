@@ -3,7 +3,7 @@ import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import { backend_server } from "../server";
+import { backend_server } from "../config";
 import { toast } from "react-toastify";
 import axios from "axios";
 const SignupPage = () => {
