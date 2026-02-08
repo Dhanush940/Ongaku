@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromStorage } from "../redux/actions/songStorage";
 import SongPlayer from "../components/SongPlayer";
-import Loader from "../components/Layout/Loader";
+import Loader from "../components/layout/Loader";
 import SideBar from "../components/SideBar";
 
 import MainContent from "../components/MainContent";

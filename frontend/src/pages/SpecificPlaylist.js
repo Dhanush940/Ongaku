@@ -6,7 +6,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import SingleItem from "../components/SingleItem";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import SongPlayer from "../components/SongPlayer";
-import Loader from "../components/Layout/Loader";
+import Loader from "../components/layout/Loader";
 import axios from "axios";
 import { backend_server } from "../config";
 import { toast } from "react-toastify";
