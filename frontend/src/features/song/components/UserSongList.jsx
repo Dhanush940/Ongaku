@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import SongCard from "./SongCard";
 import { useSelector } from "react-redux";
 
-const UserSong = () => {
+const UserSongList = () => {
   const { songs } = useSelector((state) => state.songs);
   return (
     <>
@@ -17,4 +17,4 @@ const UserSong = () => {
   );
 };
 
-export default UserSong;
+export default UserSongList;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import PlaylistSideBar from "../components/PlaylistSideBar";
-import PlaylistManager from "../components/PlaylistContent"; // Renamed this in my head but file is still PlaylistContent
+import PlaylistManager from "../components/PlaylistManager";
 import { removeFromStorage } from "../../player/redux/actions/playerActions";
 
 const PlaylistPage = () => {

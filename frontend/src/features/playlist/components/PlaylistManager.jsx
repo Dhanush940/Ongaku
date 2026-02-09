@@ -19,7 +19,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { backend_server } from "../../../config";
 
-const PlaylistContent = () => {
+const PlaylistManager = () => {
   const { loading, isAuthenticated, user } = useSelector((state) => state.user);
   const { songs } = useSelector((state) => state.songs);
   const [createPlaylistDialogue, setCreatePlaylistDialogue] = useState(false);
@@ -463,4 +463,4 @@ const PlaylistContent = () => {
   );
 };
 
-export default PlaylistContent;
+export default PlaylistManager;

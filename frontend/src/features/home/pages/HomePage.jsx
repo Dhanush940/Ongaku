@@ -5,7 +5,7 @@ import SongPlayer from "../../player/components/SongPlayer";
 import Loader from "../../../components/layout/Loader";
 import SideBar from "../../../components/layout/SideBar";
 
-import MainContent from "../components/MainContent";
+import HomeContainer from "../components/HomeContainer";
 
 const HomePage = () => {
   const { loading } = useSelector((state) => state.user);
@@ -40,7 +40,7 @@ const HomePage = () => {
             }
           >
             <SideBar />
-            <MainContent />
+            <HomeContainer />
           </div>
 
           {currentSong?.duration && <SongPlayer songs={songs} />}

@@ -12,7 +12,7 @@ import { loadUser } from "./features/auth/redux/actions/userActions";
 import { useDispatch } from "react-redux";
 import { loadSongs } from "./features/song/redux/actions/songActions";
 import PlaylistPage from "./features/playlist/pages/PlaylistPage";
-import SpecificPlaylist from "./features/playlist/pages/SpecificPlaylistPage";
+import PlaylistDetailsPage from "./features/playlist/pages/PlaylistDetailsPage";
 import { getPlaylists } from "./features/playlist/redux/actions/playlistActions";
 import ResetPasswordPage from "./features/auth/pages/ResetPasswordPage";
 
@@ -38,7 +38,7 @@ function App() {
         <Route path="/resetPassword/:token" element={<ResetPasswordPage />} />
 
         <Route path="/playlists" element={<PlaylistPage />} />
-        <Route path="/playlist/:id" element={<SpecificPlaylist />} />
+        <Route path="/playlist/:id" element={<PlaylistDetailsPage />} />
       </Routes>
       <ToastContainer
         position="bottom-center"

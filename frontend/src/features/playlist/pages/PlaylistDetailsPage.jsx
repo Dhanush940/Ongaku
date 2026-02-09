@@ -10,7 +10,7 @@ import Loader from "../../../components/layout/Loader"; // Assuming Loader is in
 import axios from "axios";
 import { backend_server } from "../../../config";
 import { toast } from "react-toastify";
-const SpecificPlaylist = () => {
+const PlaylistDetailsPage = () => {
   const { id } = useParams();
   const { user, isAuthenticated, loading } = useSelector((state) => state.user);
   const { playlists } = useSelector((state) => state.playlist);
@@ -137,4 +137,4 @@ const SpecificPlaylist = () => {
   );
 };
 
-export default SpecificPlaylist;
+export default PlaylistDetailsPage;

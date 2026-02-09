@@ -3,12 +3,12 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Guest from "./Guest";
-import UserSong from "../../song/components/UserSong";
+import UserSongList from "../../song/components/UserSongList";
 import axios from "axios";
 import { backend_server } from "../../../config";
 import { toast } from "react-toastify";
 
-const MainContent = () => {
+const HomeContainer = () => {
   const [showLogoutDiv, setShowLogoutDiv] = useState(false);
   const { user, isAuthenticated, loading } = useSelector((state) => state.user);
   const { songs } = useSelector((state) => state.songs);
@@ -81,7 +81,7 @@ const MainContent = () => {
         <div>
           {songs?.length > 0 ? (
             <>
-              <UserSong />
+              <UserSongList />
             </>
           ) : (
             songs?.length < 1 && (
@@ -101,5 +101,5 @@ const MainContent = () => {
   );
 };
 
-export default React.memo(MainContent);
+export default React.memo(HomeContainer);
 //For optimizing performance of the react app
