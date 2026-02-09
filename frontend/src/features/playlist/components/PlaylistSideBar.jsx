@@ -108,7 +108,7 @@ const PlaylistSideBar = () => {
                 {loadingFetchPlaylists ||
                   playlists?.map((item, index) => {
                     return (
-                      <Link to={`/playlist/${item._id}`}>
+                      <Link to={`/playlists/${item._id}`}>
                         {id && id === item._id ? (
                           <div
                             className={` w-full bg-zinc-700 pl-7 rounded-md h-fit py-2`}
