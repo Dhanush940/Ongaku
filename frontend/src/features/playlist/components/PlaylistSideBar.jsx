@@ -9,6 +9,7 @@ import SongUploadModal from "../../player/components/SongUploadModal";
 import { Link, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
+import { HOME, PLAYLISTS, getPlaylistDetailsPath } from "../../../constants/routes";
 const PlaylistSideBar = () => {
   const { id } = useParams();
   const [rotate, setRotate] = useState(id ? true : false);
@@ -108,7 +109,7 @@ const PlaylistSideBar = () => {
                 {loadingFetchPlaylists ||
                   playlists?.map((item, index) => {
                     return (
-                      <Link to={`/playlists/${item._id}`}>
+                      <Link to={getPlaylistDetailsPath(item._id)}>
                         {id && id === item._id ? (
                           <div
                             className={` w-full bg-zinc-700 pl-7 rounded-md h-fit py-2`}

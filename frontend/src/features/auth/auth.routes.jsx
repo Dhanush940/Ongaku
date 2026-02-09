@@ -1,6 +1,9 @@
-import { lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import { Route } from "react-router-dom";
-import { GuestLayout } from "../../routes/layouts";
+import { AUTH } from "../../constants/routes";
+import { GuestLayout, PublicLayout } from "../../routes/layouts";
+import FeatureErrorBoundary from "../../routes/FeatureErrorBoundary";
+import { AuthFormSkeleton } from "../../components/common/Skeletons";
 
 // Lazy-loaded auth pages
 const LoginPage = lazy(() => import("./pages/LoginPage"));
@@ -9,23 +12,83 @@ const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage"));
 const ResetPasswordPage = lazy(() => import("./pages/ResetPasswordPage"));
 const ActivationPage = lazy(() => import("./pages/ActivationPage"));
 
+// Auth form wrapper with suspense and error boundary
+const AuthPageWrapper = ({ children }) => (
+  <FeatureErrorBoundary featureName="Authentication">
+    <Suspense
+      fallback={
+        <div className="w-screen h-screen bg-black flex items-center justify-center">
+          <AuthFormSkeleton />
+        </div>
+      }
+    >
+      {children}
+    </Suspense>
+  </FeatureErrorBoundary>
+);
+
 /**
  * Auth feature routes.
- * Guest-only routes are wrapped in GuestLayout to redirect authenticated users.
- * Activation route is public (can be accessed by anyone with the token).
+ * 
+ * Routes:
+ * - /login (guest-only)
+ * - /signup (guest-only)
+ * - /forgot-password (guest-only)
+ * - /reset-password/:token (guest-only)
+ * - /activation/:token (public)
+ * 
+ * Layout: GuestLayout redirects authenticated users away from auth pages
+ * Export pattern: JSX fragment with feature-level error boundary and suspense
  */
 const AuthRoutes = (
   <>
     {/* Guest-only routes - redirect if already logged in */}
     <Route element={<GuestLayout />}>
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/signup" element={<SignupPage />} />
-      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-      <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
+      <Route
+        path={AUTH.LOGIN}
+        element={
+          <AuthPageWrapper>
+            <LoginPage />
+          </AuthPageWrapper>
+        }
+      />
+      <Route
+        path={AUTH.SIGNUP}
+        element={
+          <AuthPageWrapper>
+            <SignupPage />
+          </AuthPageWrapper>
+        }
+      />
+      <Route
+        path={AUTH.FORGOT_PASSWORD}
+        element={
+          <AuthPageWrapper>
+            <ForgotPasswordPage />
+          </AuthPageWrapper>
+        }
+      />
+      <Route
+        path={AUTH.RESET_PASSWORD}
+        element={
+          <AuthPageWrapper>
+            <ResetPasswordPage />
+          </AuthPageWrapper>
+        }
+      />
     </Route>
 
     {/* Public route - accessible to anyone with valid token */}
-    <Route path="/activation/:activation_token" element={<ActivationPage />} />
+    <Route element={<PublicLayout />}>
+      <Route
+        path={AUTH.ACTIVATION}
+        element={
+          <AuthPageWrapper>
+            <ActivationPage />
+          </AuthPageWrapper>
+        }
+      />
+    </Route>
   </>
 );
 

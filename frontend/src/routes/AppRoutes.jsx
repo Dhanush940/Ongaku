@@ -1,6 +1,5 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import RouteLoader from "./RouteLoader";
 import ErrorBoundary from "./ErrorBoundary";
 import NotFoundPage from "../pages/NotFoundPage";
 
@@ -14,9 +13,9 @@ import PlaylistRoutes from "../features/playlist/playlist.routes";
  * 
  * Architecture:
  * - Feature routes are defined in their respective feature folders
+ * - Each feature manages its own lazy loading and error boundaries
  * - Layouts handle cross-cutting concerns (auth, loading)
- * - Suspense provides loading states for lazy-loaded components
- * - ErrorBoundary catches and handles rendering errors
+ * - Global ErrorBoundary catches any uncaught errors
  * 
  * Route Structure:
  * /                          - Home (public)
@@ -27,25 +26,33 @@ import PlaylistRoutes from "../features/playlist/playlist.routes";
  * /activation/:token         - Account activation (public)
  * /playlists                 - Playlist list (protected)
  * /playlists/:id             - Playlist details (protected)
+ * 
+ * Layout Types:
+ * - PublicLayout: No auth checks, accessible to all
+ * - GuestLayout: Redirects authenticated users away
+ * - ProtectedLayout: Requires authentication
+ * 
+ * Future Extensibility:
+ * - Role-based routing: Add RoleGuard layout
+ * - Data loaders: Add loader prop to routes (React Router 6.4+)
+ * - Analytics: Add route change listener
  */
 const AppRoutes = () => {
   return (
     <ErrorBoundary>
-      <Suspense fallback={<RouteLoader />}>
-        <Routes>
-          {/* Home routes */}
-          {HomeRoutes}
+      <Routes>
+        {/* Home routes (public) */}
+        {HomeRoutes}
 
-          {/* Auth routes */}
-          {AuthRoutes}
+        {/* Auth routes (guest-only / public) */}
+        {AuthRoutes}
 
-          {/* Playlist routes */}
-          {PlaylistRoutes}
+        {/* Playlist routes (protected) */}
+        {PlaylistRoutes}
 
-          {/* Catch-all 404 */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </Suspense>
+        {/* Catch-all 404 */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </ErrorBoundary>
   );
 };

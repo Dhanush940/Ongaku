@@ -16,6 +16,7 @@ import {
 } from "../redux/actions/playlistActions";
 import { RiMusicFill } from "react-icons/ri";
 import { toast } from "react-toastify";
+import { getPlaylistDetailsPath } from "../../../constants/routes";
 
 /**
  * PlaylistManager - Displays and manages user playlists.
@@ -143,7 +144,7 @@ const PlaylistManager = () => {
                       </div>
                     )}
                     {index === hoverOverDiv && (
-                      <Link to={`/playlists/${playlists[index]._id}`}>
+                      <Link to={getPlaylistDetailsPath(playlists[index]._id)}>
                         <div
                           className="absolute top-28 left-3 w-9 h-9 flex justify-center items-center rounded-3xl
                       bg-white bg-opacity-5 hover:bg-slate-200 hover:bg-opacity-10

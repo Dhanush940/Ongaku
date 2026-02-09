@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MdMusicOff } from "react-icons/md";
+import { HOME } from "../constants/routes";
 
 /**
  * NotFoundPage - 404 error page displayed for invalid routes.
@@ -17,7 +18,7 @@ const NotFoundPage = () => {
         The page you're looking for doesn't exist or has been moved.
       </p>
       <Link
-        to="/"
+        to={HOME.ROOT}
         className="px-8 py-3 bg-green-600 rounded-full hover:bg-green-500 transition-colors font-semibold active:scale-95"
       >
         Go Home
@@ -27,3 +28,4 @@ const NotFoundPage = () => {
 };
 
 export default NotFoundPage;
+

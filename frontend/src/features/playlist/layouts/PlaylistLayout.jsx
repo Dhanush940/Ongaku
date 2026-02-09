@@ -8,6 +8,7 @@ import PlaylistSideBar from "../components/PlaylistSideBar";
 import SongPlayer from "../../player/components/SongPlayer";
 import { removeFromStorage } from "../../player/redux/actions/playerActions";
 import { backend_server } from "../../../config";
+import { AUTH, HOME } from "../../../constants/routes";
 
 const PlaylistLayout = () => {
   const dispatch = useDispatch();
@@ -40,7 +41,7 @@ const PlaylistLayout = () => {
       .get(`${backend_server}/user/logout`, { withCredentials: true })
       .then((res) => {
         toast.success(res.data.message);
-        navigate("/");
+        navigate(HOME.ROOT);
         window.location.reload(true);
       })
       .catch((error) => {
@@ -71,12 +72,12 @@ const PlaylistLayout = () => {
 
             {user === undefined ? (
               <div className="flex items-center gap-6">
-                <Link to="/signup">
+                <Link to={AUTH.SIGNUP}>
                   <span className="font-semibold text-white hover:font-extrabold">
                     Sign up
                   </span>
                 </Link>
-                <Link to="/login">
+                <Link to={AUTH.LOGIN}>
                   <div className="bg-white p-4 w-32 rounded-e-3xl rounded-s-3xl text-center text-black font-bold hover:bg-slate-50">
                     Log in
                   </div>
