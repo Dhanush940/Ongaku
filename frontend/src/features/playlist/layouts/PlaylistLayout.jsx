@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import axios from "axios";
 import { toast } from "react-toastify";
-import PlaylistSideBar from "../components/PlaylistSideBar";
+import NavigationSidebar from "../../../components/layout/NavigationSidebar";
+import Header from "../../../components/layout/Header";
 import SongPlayer from "../../player/components/SongPlayer";
 import { removeFromStorage } from "../../player/redux/actions/playerActions";
 import { backend_server } from "../../../config";
@@ -13,9 +13,7 @@ import { AUTH, HOME } from "../../../constants/routes";
 const PlaylistLayout = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [showLogoutDiv, setShowLogoutDiv] = useState(false);
 
-  const { user } = useSelector((state) => state.user);
   const { currentSong } = useSelector((state) => state.storage);
   const { playlists } = useSelector((state) => state.playlist);
 
@@ -36,87 +34,36 @@ const PlaylistLayout = () => {
     return null;
   };
 
-  const logoutHandler = () => {
-    axios
-      .get(`${backend_server}/user/logout`, { withCredentials: true })
-      .then((res) => {
-        toast.success(res.data.message);
-        navigate(HOME.ROOT);
-        window.location.reload(true);
-      })
-      .catch((error) => {
-        console.log(error.response?.data?.message);
-      });
-  };
-
   return (
-    <div className="w-screen h-screen bg-black">
+    <div className="w-screen h-screen bg-black overflow-hidden flex flex-col">
       <div
         className={
           currentSong?.duration === undefined
-            ? `w-screen h-[100vh] flex gap-2 p-0.5 pl-2`
-            : `w-screen h-[90vh] flex gap-2 p-0.5 pl-2`
+            ? `flex-1 flex gap-2 p-2 w-full h-full`
+            : `flex-1 flex gap-2 p-2 w-full h-[calc(100vh-90px)]`
         }
       >
         {/* Shared Sidebar */}
-        <PlaylistSideBar />
+        <NavigationSidebar />
 
         {/* Main Content Area */}
-        <div className="w-[80%] ml-1 sm:w-[75%] sm:ml-0 my-2 mr-1 rounded-md bg-[#1f1f1f] overflow-y-auto relative">
+        <div className="flex-1 w-full ml-1 sm:ml-0 rounded-md bg-[#1f1f1f] overflow-hidden flex flex-col relative">
+          
           {/* Header */}
-          <div className="bg-stone-400 p-4 flex justify-between items-center w-full sticky top-0 z-10">
-            <div className="flex">
-              <AiOutlineLeft size={20} color="white" />
-              <AiOutlineRight size={20} color="white" />
-            </div>
-
-            {user === undefined ? (
-              <div className="flex items-center gap-6">
-                <Link to={AUTH.SIGNUP}>
-                  <span className="font-semibold text-white hover:font-extrabold">
-                    Sign up
-                  </span>
-                </Link>
-                <Link to={AUTH.LOGIN}>
-                  <div className="bg-white p-4 w-32 rounded-e-3xl rounded-s-3xl text-center text-black font-bold hover:bg-slate-50">
-                    Log in
-                  </div>
-                </Link>
-              </div>
-            ) : (
-              <div className="flex gap-2 items-center mr-3 relative">
-                <span>Hi, {user.name}</span>
-                <img
-                  src={user.avatar?.url}
-                  alt="User Avatar"
-                  className="w-10 h-10 rounded-full cursor-pointer"
-                  onMouseOver={() => setShowLogoutDiv(!showLogoutDiv)}
-                />
-
-                {showLogoutDiv && (
-                  <div className="w-24 h-10 bg-zinc-700 rounded-lg absolute top-10 -right-6 flex justify-center items-center z-50">
-                    <div className="active:scale-95">
-                      <span
-                        className="z-40 hover:cursor-pointer hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 hover:text-transparent hover:text-xl hover:bg-clip-text"
-                        onClick={logoutHandler}
-                      >
-                        Logout
-                      </span>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
+          <Header />
 
           {/* Page Content - rendered via Outlet */}
-          <Outlet />
+          <div className="flex-1 overflow-y-auto custom-scrollbar">
+             <Outlet />
+          </div>
         </div>
       </div>
 
       {/* Song Player - visible when a song is playing */}
       {currentSong?.duration && (
-        <SongPlayer songs={getCurrentPlaylistSongs()} />
+        <div className="w-full h-[90px] fixed bottom-0 left-0 z-50 bg-black border-t border-zinc-800">
+           <SongPlayer songs={getCurrentPlaylistSongs()} />
+        </div>
       )}
     </div>
   );

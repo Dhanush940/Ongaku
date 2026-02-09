@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromStorage } from "../../player/redux/actions/playerActions";
 import SongPlayer from "../../player/components/SongPlayer";
 import Loader from "../../../components/layout/Loader";
-import SideBar from "../../../components/layout/SideBar";
+import NavigationSidebar from "../../../components/layout/NavigationSidebar";
 
 import HomeContainer from "../components/HomeContainer";
 
@@ -39,7 +39,7 @@ const HomePage = () => {
                 : `w-screen h-[90vh] flex gap-2 p-0.5 pl-2`
             }
           >
-            <SideBar />
+            <NavigationSidebar />
             <HomeContainer />
           </div>
 
