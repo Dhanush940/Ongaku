@@ -3,7 +3,7 @@ import { spotify } from "../../../data/data";
 import { FaPlay } from "react-icons/fa";
 import { toast } from "react-toastify";
 const Guest = () => {
-  const [hover, setHover] = useState(false);
+  const [hover, setHover] = useState(-1);
   return (
     <div className="text-white mx-3 mt-5 flex justify-between flex-wrap">
       {spotify.map((item, index) => {

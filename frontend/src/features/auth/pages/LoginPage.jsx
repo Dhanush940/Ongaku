@@ -2,34 +2,41 @@ import React, { useState } from "react";
 import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { backend_server } from "../../../config";
+import { useDispatch } from "react-redux"; // Import useDispatch
+// import axios from "axios"; // Removing axios
+// import { backend_server } from "../../../config"; // Removing backend_server
 import { toast } from "react-toastify";
+import { loginUser } from "../userThunks"; // Import loginUser thunk
+
 const LoginPage = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch(); // Initialize dispatch
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
 
+  // Best Practice: Component logic handles UI feedback (Toasts/Navigation) after dispatch
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios
-      .post(
-        `${backend_server}/user/login-user`,
-        {
-          email,
-          password,
-        },
-        { withCredentials: true }
-      )
-      .then((res) => {
+    
+    try {
+      // Dispatch the thunk and wait for result
+      const resultAction = await dispatch(loginUser({ email, password }));
+      
+      if (loginUser.fulfilled.match(resultAction)) {
         toast.success("Login Success!");
-        navigate("/");
-        window.location.reload(true);
-      })
-      .catch((err) => {
-        toast.error(err.response?.data?.message);
-      });
+        // Navigation is handled by GuestLayout (redirects if authenticated), 
+        // but explicit navigation ensures immediate feedback if needed.
+        navigate("/"); 
+      } else {
+        // Handle rejection
+        const errorMsg = resultAction.payload || "Login failed";
+        toast.error(errorMsg);
+      }
+    } catch (err) {
+      toast.error("Unexpected error during login");
+      console.error(err);
+    }
   };
 
   return (

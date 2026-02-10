@@ -7,6 +7,7 @@ import {
   renamePlaylist,
   removeSongFromPlaylist,
 } from "./playlistThunks";
+import { logoutUser } from "../auth/userThunks";
 
 const initialState = {
   playlists: [],
@@ -122,6 +123,17 @@ const playlistSlice = createSlice({
         if (index !== -1) {
           state.playlists[index] = action.payload.updatedPlaylist;
         }
+      })
+      .addCase(logoutUser.fulfilled, (state) => {
+        // Clear all playlist state on logout
+        state.playlists = [];
+        state.error = null;
+        state.successMessage = null;
+        state.loadingFetchPlaylists = false;
+        state.deleteLoading = false;
+        state.deleteError = null;
+        state.loadingBeforeAddingSongs = false;
+        state.errorAddingSongs = null;
       });
   },
 });

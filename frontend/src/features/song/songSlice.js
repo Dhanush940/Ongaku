@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { loadSongs, deleteSongFromDatabase } from "./songThunks";
+import { logoutUser } from "../auth/userThunks";
 
 const initialState = {
   songs: [],
@@ -51,6 +52,14 @@ const songSlice = createSlice({
       .addCase(deleteSongFromDatabase.rejected, (state, action) => {
         state.deleteLoading = false;
         state.deleteError = action.payload || "Failed to delete song";
+      })
+      .addCase(logoutUser.fulfilled, (state) => {
+        state.songs = [];
+        state.isLoading = false;
+        state.error = null;
+        state.deleteLoading = false;
+        state.deleteError = null;
+        state.successMessage = null;
       });
   },
 });

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { logoutUser } from "../auth/userThunks";
 
 const initialState = {
   currentSong: null,
@@ -16,6 +17,11 @@ const playerSlice = createSlice({
       state.currentSong = null;
     },
     // Add playback state reducers here (play, pause, etc)
+  },
+  extraReducers: (builder) => {
+    builder.addCase(logoutUser.fulfilled, (state) => {
+      state.currentSong = null;
+    });
   },
 });
 

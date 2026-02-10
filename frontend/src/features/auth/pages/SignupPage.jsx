@@ -3,35 +3,46 @@ import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import { backend_server } from "../../../config";
+// import { backend_server } from "../../../config"; // Removed
 import { toast } from "react-toastify";
-import axios from "axios";
+import { useDispatch } from "react-redux";
+import { registerUser } from "../userThunks"; // Import registerUser thunk
+// import axios from "axios"; // Removed
+
 const SignupPage = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
   const [avatar, setAvatar] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post(`${backend_server}/user/create-user`, {
+    
+    try {
+      const resultAction = await dispatch(registerUser({
         name,
         email,
         password,
         avatar,
-      })
-      .then((res) => {
-        toast.success(res.data.message);
+      }));
+
+      if (registerUser.fulfilled.match(resultAction)) {
+        toast.success(resultAction.payload); // Success message from backend
         setName("");
         setEmail("");
         setPassword("");
-        setAvatar();
-      })
-      .catch((error) => {
-        toast.error(error.response.data.message);
-      });
+        setAvatar(null);
+      } else {
+        toast.error(resultAction.payload || "Registration failed");
+      }
+    } catch (err) {
+      toast.error("Unexpected error during registration");
+      console.error(err);
+    }
   };
+
   const handleFileInputChange = (e) => {
     const reader = new FileReader();
 
