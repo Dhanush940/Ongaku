@@ -10,7 +10,7 @@ import {
   deletePlaylist,
   renamePlaylist,
   getPlaylists
-} from "../redux/actions/playlistActions";
+} from "../playlistThunks";
 import AddSongsToPlaylistModal from "./modals/AddSongsToPlaylistModal";
 
 const PlaylistCard = ({ playlist }) => {
@@ -36,7 +36,7 @@ const PlaylistCard = ({ playlist }) => {
 
   const handleRename = () => {
     if (renameValue.trim()) {
-      dispatch(renamePlaylist(renameValue, playlist));
+      dispatch(renamePlaylist({ name: renameValue, playlist }));
       // Optionally refresh playlists if needed, but reducer should handle state update
       // dispatch(getPlaylists()); 
       setIsRenaming(false);
@@ -189,10 +189,7 @@ const PlaylistCard = ({ playlist }) => {
       <AddSongsToPlaylistModal 
          isOpen={showAddSongsModal} 
          onClose={() => setShowAddSongsModal(false)}
-         playlistId={playlist._id} // Correctly passing ID, action expects 'playlist' object or ID? 
-         // Action: addSongsInPlaylist(array, playlist)
-         // Reducer payload: payload: { playlist, data: res.data.data }
-         // let's check action again.
+         playlist={playlist}
       />
     </>
   );

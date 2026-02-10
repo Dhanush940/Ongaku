@@ -4,9 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Store from "./store/store";
-import { loadUser } from "./features/auth/redux/actions/userActions";
-import { loadSongs } from "./features/song/redux/actions/songActions";
-import { getPlaylists } from "./features/playlist/redux/actions/playlistActions";
+import { loadUser } from "./features/auth/userThunks";
+import { loadSongs } from "./features/song/songThunks";
+import { getPlaylists } from "./features/playlist/playlistThunks";
 import { AppRoutes } from "./routes";
 
 function App() {

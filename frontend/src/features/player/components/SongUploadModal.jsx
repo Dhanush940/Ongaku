@@ -4,7 +4,7 @@ import axios from "axios";
 import { backend_server } from "../../../config";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import { loadSongs } from "../../song/redux/actions/songActions";
+import { loadSongs } from "../../song/songThunks";
 const SongUploadModal = ({ create, setCreate }) => {
   const [store, setStore] = useState({
     title: "",

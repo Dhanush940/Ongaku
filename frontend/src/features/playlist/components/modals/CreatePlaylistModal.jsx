@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
 import { useDispatch } from "react-redux";
-import { createPlaylist } from "../../redux/actions/playlistActions";
+import { createPlaylist } from "../../playlistThunks";
 
 const CreatePlaylistModal = ({ isOpen, onClose }) => {
   const [inputValue, setInputValue] = useState("Untitled Playlist");

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { addToStorage, removeFromStorage } from "../../player/redux/actions/playerActions";
+import { addToStorage, removeFromStorage } from "../../player/playerSlice";
 import { MdDelete } from "react-icons/md";
-import { deleteSongFromDatabase, loadSongs } from "../redux/actions/songActions";
+import { deleteSongFromDatabase, loadSongs } from "../songThunks";
 import { useParams } from "react-router-dom";
-import { removeSongFromPlaylist } from "../../playlist/redux/actions/playlistActions";
+import { removeSongFromPlaylist } from "../../playlist/playlistThunks";
 
 const SongCard = ({ item, index, playlists }) => {
   const dispatch = useDispatch();
@@ -117,7 +117,7 @@ const SongCard = ({ item, index, playlists }) => {
               <div className="flex gap-10 mt-3">
                 <div
                   onClick={() => {
-                    dispatch(removeSongFromPlaylist(id, item));
+                    dispatch(removeSongFromPlaylist({ playlistId: id, songToBeRemoved: item }));
                     if (currentSong?.song === item.song) {
                       dispatch(removeFromStorage());
                     }

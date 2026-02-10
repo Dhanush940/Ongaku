@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ImPrevious2, ImNext2 } from "react-icons/im";
 import { MdVolumeDown, MdVolumeOff, MdVolumeUp } from "react-icons/md";
 import SongProgressBar from "./SongProgressBar";
-import { addToStorage } from "../redux/actions/playerActions";
+import { addToStorage } from "../playerSlice";
 import { FaPause, FaPlay } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import { TbRewindBackward5, TbRewindForward5 } from "react-icons/tb";

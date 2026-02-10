@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { addSongsInPlaylist } from "../../redux/actions/playlistActions";
+import { addSongsInPlaylist } from "../../playlistThunks";
 
 const AddSongsToPlaylistModal = ({ isOpen, onClose, playlist }) => {
   const [inputString, setInputString] = useState("");
@@ -31,10 +31,17 @@ const AddSongsToPlaylistModal = ({ isOpen, onClose, playlist }) => {
     const songIndices = validateUserInput(inputString);
 
     if (songIndices.length > 0) {
-      // The action expects an array of song indices to add
-      dispatch(addSongsInPlaylist(songIndices, playlist));
-      onClose();
-      setInputString("");
+      // Logic moved to component: Filter songs based on 1-based indices locally
+      // Thunk expects PREPARED data (filteredSongs), not raw indices
+      const filteredSongs = songs.filter((_, index) => 
+        songIndices.includes(index + 1)
+      );
+
+      if (filteredSongs.length > 0) {
+        dispatch(addSongsInPlaylist({ filteredSongs, playlist }));
+        onClose();
+        setInputString("");
+      }
     }
   };
 

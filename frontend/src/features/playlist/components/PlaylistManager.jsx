@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdLibraryMusic } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { getPlaylists } from "../redux/actions/playlistActions";
+import { getPlaylists } from "../playlistThunks";
 import { toast } from "react-toastify";
 
 import PlaylistCard from "./PlaylistCard";

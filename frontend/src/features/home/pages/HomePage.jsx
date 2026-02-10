@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromStorage } from "../../player/redux/actions/playerActions";
+import { removeFromStorage } from "../../player/playerSlice";
 import SongPlayer from "../../player/components/SongPlayer";
 import Loader from "../../../components/layout/Loader";
 import NavigationSidebar from "../../../components/layout/NavigationSidebar";

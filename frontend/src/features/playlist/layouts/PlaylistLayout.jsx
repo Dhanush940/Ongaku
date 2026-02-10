@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import NavigationSidebar from "../../../components/layout/NavigationSidebar";
 import Header from "../../../components/layout/Header";
 import SongPlayer from "../../player/components/SongPlayer";
-import { removeFromStorage } from "../../player/redux/actions/playerActions";
+import { removeFromStorage } from "../../player/playerSlice";
 import { backend_server } from "../../../config";
 import { AUTH, HOME } from "../../../constants/routes";
 

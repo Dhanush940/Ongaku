@@ -7,7 +7,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { HOME, PLAYLISTS, getPlaylistDetailsPath } from "../../constants/routes";
-import { getPlaylists } from "../../features/playlist/redux/actions/playlistActions";
+import { getPlaylists } from "../../features/playlist/playlistThunks";
 import SongUploadModal from "../../features/player/components/SongUploadModal";
 
 const NavigationSidebar = () => {

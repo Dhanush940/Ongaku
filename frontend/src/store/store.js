@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { userReducer } from "../features/auth/redux/reducers/userReducer";
-import { songReducer } from "../features/song/redux/reducers/songReducer";
-import { playerReducer } from "../features/player/redux/reducers/playerReducer";
-import { playlistReducer } from "../features/playlist/redux/reducers/playlistReducer";
+import userReducer from "../features/auth/userSlice";
+import songReducer from "../features/song/songSlice";
+import playerReducer from "../features/player/playerSlice";
+import playlistReducer from "../features/playlist/playlistSlice";
 
 const Store = configureStore({
   reducer: {
