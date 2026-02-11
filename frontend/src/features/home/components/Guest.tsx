@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { spotify, type SpotifyItem } from "../../../data/data";
 import { FaPlay } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const Guest: React.FC = () => {
+  const { t } = useTranslation('common');
   const [hover, setHover] = useState<number>(-1);
   return (
     <div className="text-white mx-3 mt-5 flex justify-between flex-wrap">
@@ -24,7 +26,7 @@ const Guest: React.FC = () => {
                 <div
                   className="bg-green-600 w-12 h-12 absolute top-24 right-5 rounded-full flex items-center justify-center pl-1  hover:scale-110 "
                   onClick={() => {
-                    toast.error("You must login ");
+                    toast.error(t('errors.login_required'));
                   }}
                 >
                   <FaPlay size={25} color="black" />

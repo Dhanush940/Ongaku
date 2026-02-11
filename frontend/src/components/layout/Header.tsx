@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher";
 import { toast } from "react-toastify";
 import { AUTH, HOME } from "../../constants/routes";
 import { logoutUser } from "../../features/auth/userThunks";
@@ -13,6 +15,7 @@ interface UserState {
 }
 
 const Header = () => {
+  const { t } = useTranslation(['common', 'auth']);
   const [showLogoutDiv, setShowLogoutDiv] = useState(false);
   const { user } = useSelector((state: RootState) => state.user as UserState); // Casting for gradual migration
   const dispatch = useDispatch<AppDispatch>(); // Typed dispatch
@@ -33,7 +36,8 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-stone-400 p-4 flex justify-end items-center w-full sticky top-0 z-10 rounded-t-md">
+    <div className="bg-stone-400 p-4 flex justify-end items-center w-full sticky top-0 z-10 rounded-t-md gap-4">
+      <LanguageSwitcher />
       {/* 
         Fix: Check for !user (null or undefined) instead of just undefined.
         Initial state is null, so user === undefined is false.
@@ -42,12 +46,12 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <Link to={AUTH.SIGNUP}>
             <span className="font-semibold text-white hover:font-extrabold">
-              Sign up
+              {t('signup', { ns: 'auth' })}
             </span>
           </Link>
           <Link to={AUTH.LOGIN}>
             <div className="bg-white p-4 w-32 rounded-e-3xl rounded-s-3xl text-center text-black font-bold hover:bg-slate-50">
-              Log in
+              {t('login', { ns: 'auth' })}
             </div>
           </Link>
         </div>
@@ -73,7 +77,7 @@ const Header = () => {
                 className="cursor-pointer hover:text-pink-500 text-white font-medium transition-colors"
                 onClick={logoutHandler}
               >
-                Logout
+                {t('logout', { ns: 'auth' })}
               </div>
             </div>
           )}

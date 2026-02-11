@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import SongCard from "../../song/components/SongCard";
@@ -10,6 +11,7 @@ import type { RootState } from "../../../store/store";
  * Layout (sidebar, header, player) is provided by PlaylistLayout.
  */
 const PlaylistDetailsPage: React.FC = () => {
+  const { t } = useTranslation('playlist');
   const { id } = useParams<{ id: string }>();
   // Assuming user state has loading and isAuthenticated
   const { loading, isAuthenticated } = useSelector((state: RootState) => state.user);
@@ -31,7 +33,7 @@ const PlaylistDetailsPage: React.FC = () => {
     <div className="flex flex-wrap gap-1 justify-center sm:justify-between lg:justify-normal">
       {playlistSongs.length < 1 ? (
         <div className="w-full text-white text-center text-2xl mt-2">
-          You don&apos;t have any songs in your playlist
+          {t('no_songs')}
         </div>
       ) : (
         playlistSongs.map((item, index) => (

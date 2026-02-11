@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,32 +9,30 @@ import { loginUser } from "../userThunks";
 import type { AppDispatch } from "../../../store/store";
 
 const LoginPage = () => {
+  const { t } = useTranslation('auth');
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
 
-  // Best Practice: Component logic handles UI feedback (Toasts/Navigation) after dispatch
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     try {
-      // Dispatch the thunk and wait for result
       const resultAction = await dispatch(loginUser({ email, password }));
       
       if (loginUser.fulfilled.match(resultAction)) {
-        toast.success("Login Success!");
-        // Navigation is handled by GuestLayout (redirects if authenticated), 
-        // but explicit navigation ensures immediate feedback if needed.
+        toast.success(t('login_success'));
+      
         navigate("/"); 
       } else {
-        // Handle rejection
-        const errorMsg = resultAction.payload || "Login failed";
+      
+        const errorMsg = resultAction.payload || t('login_failed');
         toast.error(errorMsg);
       }
     } catch (err) {
-      toast.error("Unexpected error during login");
+      toast.error(t('login_error'));
       console.error(err);
     }
   };
@@ -45,14 +44,14 @@ const LoginPage = () => {
           {" "}
           <div className="flex items-center mt-1.5">
             <SiMusicbrainz size={40} color="white" />
-            <span className="font-extrabold text-white text-2xl">Ongaku</span>
+            <span className="font-extrabold text-white text-2xl">{t('app_name', { ns: 'common' })}</span>
           </div>
         </Link>
       </div>
 
       <div className="py-12">
         <h1 className="mt-4 text-center text-white font-bold text-3xl ">
-          Login to Ongaku
+          {t('login_to_ongaku')}
         </h1>
 
         <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
@@ -63,7 +62,7 @@ const LoginPage = () => {
                   htmlFor="email"
                   className="block text-sm font-medium text-white"
                 >
-                  Email address
+                  {t('email_address')}
                 </label>
                 <div className="mt-1">
                   <input
@@ -85,7 +84,7 @@ const LoginPage = () => {
                   htmlFor="password"
                   className="block text-sm font-medium text-white"
                 >
-                  Password
+                  {t('password')}
                 </label>
                 <div className="mt-1 relative">
                   <input
@@ -121,11 +120,11 @@ const LoginPage = () => {
                 <div>
                   <input type="checkbox" name="remember" id="remember" />
                   <label htmlFor="remember" className="text-white">
-                 {""} Remember me
+                 {""} {t('remember_me')}
                   </label>
                 </div>
-                <Link to="/forgotPassword">
-                  <span className="text-blue-600">Forgot your password?</span>
+                <Link to="/forgot-password">
+                  <span className="text-blue-600">{t('forgot_password')}</span>
                 </Link>
               </div>
 
@@ -134,13 +133,13 @@ const LoginPage = () => {
                   type="submit"
                   className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
                 >
-                  Submit
+                  {t('submit')}
                 </button>
               </div>
               <div className="flex items-center w-full">
-                <h4 className="text-white">Don&apos;t have an account?</h4>
-                <Link to="/sign-up" className="text-blue-600 pl-2">
-                  Sign Up
+                <h4 className="text-white">{t('no_account')}</h4>
+                <Link to="/signup" className="text-blue-600 pl-2">
+                  {t('signup')}
                 </Link>
               </div>
             </form>

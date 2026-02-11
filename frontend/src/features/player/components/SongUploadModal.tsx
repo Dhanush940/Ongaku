@@ -1,4 +1,5 @@
 import React, { useRef, useState, ChangeEvent, FormEvent } from "react";
+import { useTranslation } from "react-i18next";
 import { RxCross1 } from "react-icons/rx";
 import axiosInstance from "../../../api/axios";
 import { toast } from "react-toastify";
@@ -18,6 +19,7 @@ interface StoreState {
 }
 
 const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
+  const { t } = useTranslation('song');
   const [store, setStore] = useState<StoreState>({
     title: "",
     name: "",
@@ -72,7 +74,7 @@ const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
   return (
     <div className="fixed left-0 top-0 w-screen h-screen flex justify-center items-center z-50 bg-[#181616da]  ">
       <div className="bg-black w-full sm:w-7/12  md:w-[62%] lg:w-[50%] xl:w-1/3  h-fit rounded-md px-6 py-2 relative  ">
-        <h1 className="text-white text-center text-2xl my-2">Add a song</h1>
+        <h1 className="text-white text-center text-2xl my-2">{t('add_song')}</h1>
 
         <RxCross1
           className="absolute top-3 right-3"
@@ -87,7 +89,7 @@ const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
               type="text"
               value={`${store.title}`}
               className="px-3 py-2 bg-zinc-800 rounded-md w-full text-white border-zinc-800 outline-none border-2 focus:border-blue-200"
-              placeholder="Song Title"
+              placeholder={t('title_placeholder')}
               required
               onChange={(e) => {
                 setStore({ ...store, title: e.target.value });
@@ -99,7 +101,7 @@ const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
               type="text"
               value={`${store.name}`}
               className="px-3 py-2 bg-zinc-800 rounded-md w-full text-white border-zinc-800 outline-none border-2 focus:border-blue-200"
-              placeholder="Artist Name"
+              placeholder={t('artist_placeholder')}
               required
               onChange={(e) => {
                 setStore({ ...store, name: e.target.value });
@@ -107,7 +109,7 @@ const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
             />
           </div>
           <div>
-            <span className="block text-white my-2">Upload an mp3 file</span>
+            <span className="block text-white my-2">{t('upload_mp3')}</span>
             <div>
               <input
                 type="file"
@@ -120,7 +122,7 @@ const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
             </div>
           </div>
           <div>
-            <span className="block text-white  my-2">Select an image</span>
+            <span className="block text-white  my-2">{t('select_image')}</span>
             <input
               type="file"
               className="px-3 py-2 bg-zinc-800 rounded-md w-full text-white border-zinc-800 outline-none border-2 "
@@ -136,7 +138,7 @@ const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
               className="bg-green-500 rounded-full h-10 w-full 
             hover:bg-green-400 active:scale-95 "
             >
-              Create
+              {t('create')}
             </button>
           </div>
         </form>

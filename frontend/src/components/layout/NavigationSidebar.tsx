@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlineHome, AiOutlinePlus } from "react-icons/ai";
 import { BsSearchHeartFill } from "react-icons/bs";
 import { MdLibraryMusic, MdQueueMusic } from "react-icons/md";
@@ -12,6 +13,7 @@ import SongUploadModal from "../../features/player/components/SongUploadModal";
 import type { AppDispatch, RootState } from "../../store/store";
 
 const NavigationSidebar: React.FC = () => {
+  const { t } = useTranslation('common');
   const { id } = useParams<{ id: string }>();
   const dispatch = useDispatch<AppDispatch>();
   const [rotate, setRotate] = useState(id ? true : false);
@@ -31,7 +33,7 @@ const NavigationSidebar: React.FC = () => {
     if (isAuthenticated) {
       setCreate(!create);
     } else {
-      toast.error("You must login to add songs");
+      toast.error(t('errors.login_to_add_songs'));
     }
   };
 
@@ -45,7 +47,7 @@ const NavigationSidebar: React.FC = () => {
               <AiOutlineHome size={22} className="text-zinc-400 group-hover:text-white" />
             </div>
             <p className="text-zinc-400 group-hover:text-white font-bold mt-1 sm:block hidden transition-colors">
-              Home
+              {t('navigation.home')}
             </p>
           </div>
         </Link>
@@ -55,7 +57,7 @@ const NavigationSidebar: React.FC = () => {
               <BsSearchHeartFill size={22} className="text-zinc-400 group-hover:text-white" />
             </div>
             <p className="text-zinc-400 group-hover:text-white font-bold mt-1 hidden sm:block transition-colors">
-              Search
+              {t('navigation.search')}
             </p>
           </div>
         </Link>
@@ -70,7 +72,7 @@ const NavigationSidebar: React.FC = () => {
             <div className="hidden sm:block group cursor-pointer hover:text-white transition-colors">
               <div className="flex gap-3 w-full items-center">
                 <MdQueueMusic size={30} className="text-zinc-400 group-hover:text-white sm:block hidden" />
-                <p className="text-zinc-400 group-hover:text-white font-bold hidden md:block">Your Library</p>
+                <p className="text-zinc-400 group-hover:text-white font-bold hidden md:block">{t('navigation.library')}</p>
               </div>
             </div>
             <div className="mr-1 sm:mr-0 relative group">
@@ -78,7 +80,7 @@ const NavigationSidebar: React.FC = () => {
                 size={22}
                 className="text-zinc-400 hover:text-white cursor-pointer transition-colors"
                 onClick={handleCreateClick}
-                title="Add Songs"
+                title={t('navigation.add_songs')}
               />
               {create && isAuthenticated && (
                 <SongUploadModal setCreate={setCreate} />
@@ -94,7 +96,7 @@ const NavigationSidebar: React.FC = () => {
                 <div className="flex gap-3 items-center">
                   <MdLibraryMusic size={22} className="text-zinc-400 group-hover:text-white sm:block hidden" />
                   <p className="text-zinc-400 group-hover:text-white font-bold hidden md:block transition-colors">
-                    Playlists
+                    {t('navigation.playlists')}
                   </p>
                 </div>
               </Link>
@@ -114,7 +116,7 @@ const NavigationSidebar: React.FC = () => {
             {rotate && (
               <div className="space-y-1 hidden sm:block">
                 {loading ? (
-                  <div className="text-zinc-500 text-sm px-4">Loading...</div>
+                  <div className="text-zinc-500 text-sm px-4">{t('loading')}</div>
                 ) : (
                   playlists?.map((item) => (
                     <Link to={getPlaylistDetailsPath(item._id)} key={item._id}>

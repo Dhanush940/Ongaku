@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { BsPlay, BsFillArrowRightCircleFill } from "react-icons/bs";
 import { BiDotsHorizontalRounded, BiSolidRename } from "react-icons/bi";
@@ -19,6 +20,7 @@ interface PlaylistCardProps {
 }
 
 const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist }) => {
+  const { t } = useTranslation("playlist");
   const dispatch = useDispatch<AppDispatch>();
   const [isHovered, setIsHovered] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
@@ -55,7 +57,7 @@ const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist }) => {
   };
 
   const handleDelete = () => {
-    if (window.confirm(`Are you sure you want to delete "${playlist.name}"?`)) {
+    if (window.confirm(t('delete_confirmation', { name: playlist.name }))) {
         dispatch(deletePlaylist(playlist));
     }
     setShowMenu(false);
@@ -142,7 +144,7 @@ const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist }) => {
                     }}
                   >
                     <BiSolidRename size={18} className="text-zinc-400" />
-                    <span className="text-sm font-medium text-zinc-200">Rename</span>
+                    <span className="text-sm font-medium text-zinc-200">{t('rename_playlist')}</span>
                   </div>
                 )}
               </div>
@@ -157,7 +159,7 @@ const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist }) => {
                   }}
                 >
                   <AiOutlineDelete size={18} className="text-zinc-400" />
-                  <span className="text-sm font-medium text-zinc-200">Delete</span>
+                  <span className="text-sm font-medium text-zinc-200">{t('delete_playlist')}</span>
                 </div>
               </div>
 
@@ -172,7 +174,7 @@ const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist }) => {
                   }}
                 >
                   <RiMusicFill size={18} className="text-zinc-400" />
-                  <span className="text-sm font-medium text-zinc-200">Add Songs</span>
+                  <span className="text-sm font-medium text-zinc-200">{t('add_songs_btn')}</span>
                 </div>
               </div>
             </div>
@@ -185,7 +187,7 @@ const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist }) => {
             {playlist.name}
           </h3>
           <p className="text-zinc-400 text-sm font-medium">
-             {playlist.playlistSongs?.length || 0} songs
+             {t(playlist.playlistSongs?.length > 1 ? 'songs_count_plural' : 'songs_count', { count: playlist.playlistSongs?.length || 0 })}
           </p>
         </div>
       </div>

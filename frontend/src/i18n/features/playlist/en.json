@@ -1,0 +1,22 @@
+{
+  "no_songs": "You don't have any songs in your playlist",
+  "playlists": "Playlists",
+  "new_playlist": "New Playlist",
+  "no_playlists": "No playlists yet",
+  "create_first_playlist": "Create your first playlist to start building your library.",
+  "create_new_playlist": "Create a new playlist",
+  "login_to_create_playlist": "Please login to create a playlist",
+  "untitled_playlist": "Untitled Playlist",
+  "playlist_name_placeholder": "Playlist Name",
+  "create": "Create",
+  "add_songs_title": "Add Songs to Playlist",
+  "song_indexes_label": "Song Indexes (comma-separated)",
+  "song_indexes_placeholder": "e.g., 1, 4, 12",
+  "find_index_hint": "Find the index number at the bottom right of each song card on the home page.",
+  "add_songs_btn": "Add Songs",
+  "rename_playlist": "Rename",
+  "delete_playlist": "Delete",
+  "delete_confirmation": "Are you sure you want to delete \"{{name}}\"?",
+  "songs_count": "{{count}} song",
+  "songs_count_plural": "{{count}} songs"
+}

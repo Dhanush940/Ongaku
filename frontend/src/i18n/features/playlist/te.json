@@ -1,0 +1,22 @@
+{
+  "no_songs": "మీ ప్లేలిస్ట్‌లో మీకు ఎలాంటి పాటలు లేవు",
+  "playlists": "ప్లేలిస్ట్‌లు",
+  "new_playlist": "కొత్త ప్లేలిస్ట్",
+  "no_playlists": "ఇంకా ప్లేలిస్ట్‌లు లేవు",
+  "create_first_playlist": "మీ లైబ్రరీని రూపొందించడం ప్రారంభించడానికి మీ మొదటి ప్లేలిస్ట్‌ని సృష్టించండి.",
+  "create_new_playlist": "కొత్త ప్లేలిస్ట్‌ని సృష్టించండి",
+  "login_to_create_playlist": "ప్లేలిస్ట్‌ని సృష్టించడానికి దయచేసి లాగిన్ చేయండి",
+  "untitled_playlist": "పేరులేని ప్లేలిస్ట్",
+  "playlist_name_placeholder": "ప్లేలిస్ట్ పేరు",
+  "create": "సృష్టించు",
+  "add_songs_title": "ప్లేలిస్ట్‌కి పాటలను జోడించండి",
+  "song_indexes_label": "పాట సూచికలు (కామాలతో వేరుచేయబడ్డాయి)",
+  "song_indexes_placeholder": "ఉదా., 1, 4, 12",
+  "find_index_hint": "హోమ్ పేజీలోని ప్రతి పాట కార్డ్ దిగువన కుడివైపున ఇండెక్స్ నంబర్‌ను కనుగొనండి.",
+  "add_songs_btn": "పాటలను జోడించండి",
+  "rename_playlist": "పేరు మార్చండి",
+  "delete_playlist": "తొలగించు",
+  "delete_confirmation": "మీరు ఖచ్చితంగా \"{{name}}\"ని తొలగించాలనుకుంటున్నారా?",
+  "songs_count": "{{count}} పాట",
+  "songs_count_plural": "{{count}} పాటలు"
+}

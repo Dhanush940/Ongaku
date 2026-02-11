@@ -1,8 +1,10 @@
 import axiosInstance from "../../../api/axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const ActivationPage = () => {
+  const { t } = useTranslation('auth');
   const { activation_token } = useParams<{ activation_token: string }>();
   const [error, setError] = useState(false);
 
@@ -33,9 +35,9 @@ const ActivationPage = () => {
       }}
     >
       {error ? (
-        <p>Your token is expired!</p>
+        <p>{t('activation_expired')}</p>
       ) : (
-        <p>Your account has been created successfully!</p>
+        <p>{t('activation_success')}</p>
       )}
     </div>
   );
