@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../../assets/background-loader.json";
+import animationData from "../../../assets/background-loader.json";
 
 const Loader: React.FC = () => {
   const defaultOptions = {

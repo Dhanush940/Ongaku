@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import Guest from "./Guest";
 import UserSongList from "../../song/components/UserSongList";
-import Header from "../../../components/layout/Header";
+import Header from "../../../shared/components/layout/Header";
 import { loadSongs } from "../../song/songThunks";
 import type { AppDispatch, RootState } from "../../../store/store";
 

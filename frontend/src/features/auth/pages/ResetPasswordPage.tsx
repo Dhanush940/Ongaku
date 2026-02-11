@@ -2,13 +2,13 @@ import React, { useState, FormEvent } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useParams } from "react-router-dom";
 import { isAxiosError } from "axios";
-import axiosInstance from "../../../api/axios";
+import authService from "../services/authService";
 import { SiMusicbrainz } from "react-icons/si";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
 
 const ResetPasswordPage = () => {
-  const { t } = useTranslation('auth');
+  const { t } = useTranslation("auth");
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -16,29 +16,29 @@ const ResetPasswordPage = () => {
   const [visibleConfirmPassword, setVisibleConfirmPassword] = useState(false);
 
   const { token } = useParams<{ token: string }>();
-  
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-       toast.error(t('passwords_do_not_match'));
-       return;
+      toast.error(t("passwords_do_not_match"));
+      return;
     }
-    axiosInstance
-      .post(
-        "/user/resetPassword",
-        { password, token, generatedPassword }
-      )
-      .then((res) => {
-        if (res.data.success === false) {
-          toast.error(res.data.message);
-        } else toast.success(res.data.message);
+    authService
+      .resetPassword({ password, token, generatedPassword })
+      .then((data) => {
+        if (data.success === false) {
+          toast.error(data.message);
+        } else toast.success(data.message);
         setPassword("");
         setConfirmPassword("");
         setGeneratedPassword("");
       })
       .catch((error: unknown) => {
-        if (isAxiosError(error) && error.response?.data?.message === "Time expired") {
-          toast.error(t('token_expired'));
+        if (
+          isAxiosError(error) &&
+          error.response?.data?.message === "Time expired"
+        ) {
+          toast.error(t("token_expired"));
         }
       });
   };
@@ -50,14 +50,16 @@ const ResetPasswordPage = () => {
           <Link to="/">
             <div className="flex items-center mt-2.5">
               <SiMusicbrainz size={40} color="white" />
-              <span className="font-extrabold text-white text-2xl">{t('app_name', { ns: 'common' })}</span>
+              <span className="font-extrabold text-white text-2xl">
+                {t("app_name", { ns: "common" })}
+              </span>
             </div>
           </Link>
         </div>
 
         <div className="py-12">
           <h1 className="mt-4 text-center text-white font-bold text-3xl ">
-            {t('reset_password_title')}
+            {t("reset_password_title")}
           </h1>
 
           <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
@@ -68,7 +70,7 @@ const ResetPasswordPage = () => {
                     htmlFor="generatedPassword"
                     className="block text-sm font-medium text-white"
                   >
-                    {t('enter_generated_password')}
+                    {t("enter_generated_password")}
                   </label>
                   <div className="mt-1 relative">
                     <input
@@ -90,7 +92,7 @@ const ResetPasswordPage = () => {
                     htmlFor="password"
                     className="block text-sm font-medium text-white"
                   >
-                    {t('password')}
+                    {t("password")}
                   </label>
                   <div className="mt-1 relative">
                     <input
@@ -126,7 +128,7 @@ const ResetPasswordPage = () => {
                     htmlFor="password"
                     className="block text-sm font-medium text-white"
                   >
-                    {t('confirm_new_password')}
+                    {t("confirm_new_password")}
                   </label>
                   <div className="mt-1 relative">
                     <input
@@ -162,13 +164,13 @@ const ResetPasswordPage = () => {
                     type="submit"
                     className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
                   >
-                    {t('submit')}
+                    {t("submit")}
                   </button>
                 </div>
                 <div className="flex items-center w-full">
-                  <h4 className="text-white">{t('no_account')}</h4>
+                  <h4 className="text-white">{t("no_account")}</h4>
                   <Link to="/sign-up" className="text-blue-600 pl-2">
-                    {t('signup')}
+                    {t("signup")}
                   </Link>
                 </div>
               </form>

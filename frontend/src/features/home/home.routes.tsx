@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 
 import { PublicLayout } from "../../routes/layouts";
 import FeatureErrorBoundary from "../../routes/FeatureErrorBoundary";
-import { HomeSkeleton } from "../../components/common/Skeletons";
+import { HomeSkeleton } from "../../shared/components/ui/Skeletons";
 
 // Lazy-loaded home page
 const HomePage = lazy(() => import("./pages/HomePage"));

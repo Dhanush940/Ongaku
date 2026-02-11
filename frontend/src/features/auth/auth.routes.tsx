@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { AUTH } from "../../constants/routes";
 import { GuestLayout, PublicLayout } from "../../routes/layouts";
 import FeatureErrorBoundary from "../../routes/FeatureErrorBoundary";
-import { AuthFormSkeleton } from "../../components/common/Skeletons";
+import { AuthFormSkeleton } from "../../shared/components/ui/Skeletons";
 
 
 // Lazy-loaded auth pages

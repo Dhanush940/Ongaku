@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromStorage } from "../../player/playerSlice";
 import SongPlayer from "../../player/components/SongPlayer";
-import Loader from "../../../components/layout/Loader";
-import NavigationSidebar from "../../../components/layout/NavigationSidebar";
+import Loader from "../../../shared/components/layout/Loader";
+import NavigationSidebar from "../../../shared/components/layout/NavigationSidebar";
 import type { AppDispatch, RootState } from "../../../store/store";
 
 import HomeContainer from "../components/HomeContainer";

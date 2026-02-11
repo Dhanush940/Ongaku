@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 import { PLAYLISTS } from "../../constants/routes";
 import { ProtectedLayout } from "../../routes/layouts";
 import FeatureErrorBoundary from "../../routes/FeatureErrorBoundary";
-import { PlaylistSkeleton } from "../../components/common/Skeletons";
+import { PlaylistSkeleton } from "../../shared/components/ui/Skeletons";
 
 // Lazy-loaded playlist layout and pages
 const PlaylistLayout = lazy(() => import("./layouts/PlaylistLayout"));
