@@ -4,10 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { toast } from "react-toastify";
-import { AUTH, HOME } from "../../constants/routes";
-import { logoutUser } from "../../features/auth/userThunks";
-import type { RootState, AppDispatch } from "../../store/store";
-import type { User } from "../../features/auth/types";
+import { AUTH, HOME } from "../../../constants/routes";
+import { logoutUser } from "../../../features/auth/userThunks";
+import type { RootState, AppDispatch } from "../../../store/store";
+import type { User } from "../../../features/auth/types";
 
 // Define the shape of the user slice state (minimal version based on usage)
 interface UserState {

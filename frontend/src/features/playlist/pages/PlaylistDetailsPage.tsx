@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import SongCard from "../../song/components/SongCard";
-import Loader from "../../../components/layout/Loader";
+import Loader from "../../../shared/components/layout/Loader";
 import type { RootState } from "../../../store/store";
 
 /**

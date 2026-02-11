@@ -1,20 +1,18 @@
-import axiosInstance from "../../../api/axios";
+import authService from "../services/authService";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const ActivationPage = () => {
-  const { t } = useTranslation('auth');
+  const { t } = useTranslation("auth");
   const { activation_token } = useParams<{ activation_token: string }>();
   const [error, setError] = useState(false);
 
   useEffect(() => {
     if (activation_token) {
       const sendRequest = async () => {
-        await axiosInstance
-          .post("/user/activation", {
-            activation_token,
-          })
+        authService
+          .activateUser(activation_token)
           .then(() => {})
           .catch(() => {
             setError(true);
@@ -35,9 +33,9 @@ const ActivationPage = () => {
       }}
     >
       {error ? (
-        <p>{t('activation_expired')}</p>
+        <p>{t("activation_expired")}</p>
       ) : (
-        <p>{t('activation_success')}</p>
+        <p>{t("activation_success")}</p>
       )}
     </div>
   );

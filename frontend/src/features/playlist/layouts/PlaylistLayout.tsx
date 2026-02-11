@@ -2,8 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import NavigationSidebar from "../../../components/layout/NavigationSidebar";
-import Header from "../../../components/layout/Header";
+import NavigationSidebar from "../../../shared/components/layout/NavigationSidebar";
+import Header from "../../../shared/components/layout/Header";
 import SongPlayer from "../../player/components/SongPlayer";
 import { removeFromStorage } from "../../player/playerSlice";
 import type { AppDispatch, RootState } from "../../../store/store";
