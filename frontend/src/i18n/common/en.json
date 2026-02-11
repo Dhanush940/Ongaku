@@ -1,0 +1,16 @@
+{
+  "loading": "Loading...",
+  "language": "Language",
+  "navigation": {
+    "home": "Home",
+    "search": "Search",
+    "library": "Your Library",
+    "playlists": "Playlists",
+    "add_songs": "Add Songs"
+  },
+  "errors": {
+    "login_to_add_songs": "You must login to add songs",
+    "login_required": "You must login"
+  },
+  "app_name": "Ongaku"
+}

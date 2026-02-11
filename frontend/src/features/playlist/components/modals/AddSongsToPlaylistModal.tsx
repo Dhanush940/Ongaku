@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlineClose } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { addSongsInPlaylist } from "../../playlistThunks";
@@ -12,6 +13,7 @@ interface AddSongsToPlaylistModalProps {
 }
 
 const AddSongsToPlaylistModal: React.FC<AddSongsToPlaylistModalProps> = ({ isOpen, onClose, playlist }) => {
+  const { t } = useTranslation('playlist');
   const [inputString, setInputString] = useState("");
   const dispatch = useDispatch<AppDispatch>();
   const { songs } = useSelector((state: RootState) => state.songs);
@@ -64,24 +66,24 @@ const AddSongsToPlaylistModal: React.FC<AddSongsToPlaylistModalProps> = ({ isOpe
         </button>
 
         <h2 className="text-2xl font-bold text-white mb-6 text-center">
-          Add Songs to Playlist
+          {t('add_songs_title')}
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-zinc-400 mb-2">
-              Song Indexes (comma-separated)
+              {t('song_indexes_label')}
             </label>
             <input
               type="text"
               value={inputString}
               onChange={(e) => setInputString(e.target.value)}
-              placeholder="e.g., 1, 4, 12"
+              placeholder={t('song_indexes_placeholder')}
               className="w-full bg-black border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-green-500 transition-colors"
               autoFocus
             />
             <p className="text-xs text-zinc-500 mt-2">
-              Find the index number at the bottom right of each song card on the home page.
+              {t('find_index_hint')}
             </p>
           </div>
 
@@ -89,7 +91,7 @@ const AddSongsToPlaylistModal: React.FC<AddSongsToPlaylistModalProps> = ({ isOpe
             type="submit"
             className="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-full transition-colors active:scale-95"
           >
-            Add Songs
+            {t('add_songs_btn')}
           </button>
         </form>
       </div>

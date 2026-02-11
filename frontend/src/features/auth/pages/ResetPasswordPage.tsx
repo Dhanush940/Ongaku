@@ -5,8 +5,10 @@ import { isAxiosError } from "axios";
 import axiosInstance from "../../../api/axios";
 import { SiMusicbrainz } from "react-icons/si";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 const ResetPasswordPage = () => {
+  const { t } = useTranslation('auth');
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -18,7 +20,7 @@ const ResetPasswordPage = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-       toast.error(`Password and confirm password doesn't match`);
+       toast.error(t('passwords_do_not_match'));
        return;
     }
     axiosInstance
@@ -36,7 +38,7 @@ const ResetPasswordPage = () => {
       })
       .catch((error: unknown) => {
         if (isAxiosError(error) && error.response?.data?.message === "Time expired") {
-          toast.error("Time expired.Start the process again");
+          toast.error(t('token_expired'));
         }
       });
   };
@@ -48,14 +50,14 @@ const ResetPasswordPage = () => {
           <Link to="/">
             <div className="flex items-center mt-2.5">
               <SiMusicbrainz size={40} color="white" />
-              <span className="font-extrabold text-white text-2xl">Ongaku</span>
+              <span className="font-extrabold text-white text-2xl">{t('app_name', { ns: 'common' })}</span>
             </div>
           </Link>
         </div>
 
         <div className="py-12">
           <h1 className="mt-4 text-center text-white font-bold text-3xl ">
-            Reset Your Password
+            {t('reset_password_title')}
           </h1>
 
           <div className="mt-4 sm:mx-auto sm:w-full sm:max-w-md">
@@ -66,7 +68,7 @@ const ResetPasswordPage = () => {
                     htmlFor="generatedPassword"
                     className="block text-sm font-medium text-white"
                   >
-                    Enter password sent to your mail
+                    {t('enter_generated_password')}
                   </label>
                   <div className="mt-1 relative">
                     <input
@@ -88,7 +90,7 @@ const ResetPasswordPage = () => {
                     htmlFor="password"
                     className="block text-sm font-medium text-white"
                   >
-                    Password
+                    {t('password')}
                   </label>
                   <div className="mt-1 relative">
                     <input
@@ -124,7 +126,7 @@ const ResetPasswordPage = () => {
                     htmlFor="password"
                     className="block text-sm font-medium text-white"
                   >
-                    Confirm new password
+                    {t('confirm_new_password')}
                   </label>
                   <div className="mt-1 relative">
                     <input
@@ -160,13 +162,13 @@ const ResetPasswordPage = () => {
                     type="submit"
                     className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
                   >
-                    Submit
+                    {t('submit')}
                   </button>
                 </div>
                 <div className="flex items-center w-full">
-                  <h4 className="text-white">Don&apos;t have an account?</h4>
+                  <h4 className="text-white">{t('no_account')}</h4>
                   <Link to="/sign-up" className="text-blue-600 pl-2">
-                    Sign Up
+                    {t('signup')}
                   </Link>
                 </div>
               </form>

@@ -1,4 +1,5 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import { useTranslation } from "react-i18next";
 import { SiMusicbrainz } from "react-icons/si";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { RxAvatar } from "react-icons/rx";
@@ -9,6 +10,7 @@ import { registerUser } from "../userThunks";
 import type { AppDispatch } from "../../../store/store";
 
 const SignupPage = () => {
+  const { t } = useTranslation('auth');
   const dispatch = useDispatch<AppDispatch>();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -21,7 +23,7 @@ const SignupPage = () => {
     
     try {
       if (!avatar) {
-        toast.error("Please upload an avatar");
+        toast.error(t('upload_avatar'));
         // return; // Optional: Enforce avatar requirement?
       }
 
@@ -39,10 +41,10 @@ const SignupPage = () => {
         setPassword("");
         setAvatar(null);
       } else {
-        toast.error(resultAction.payload || "Registration failed");
+        toast.error(resultAction.payload || t('registration_failed'));
       }
     } catch (err) {
-      toast.error("Unexpected error during registration");
+      toast.error(t('registration_error'));
       console.error(err);
     }
   };
@@ -67,13 +69,13 @@ const SignupPage = () => {
           {" "}
           <div className="flex items-center mt-1.5">
             <SiMusicbrainz size={40} color="white" />
-            <span className="font-extrabold text-white text-2xl">Ongaku</span>
+            <span className="font-extrabold text-white text-2xl">{t('app_name', { ns: 'common' })}</span>
           </div>
         </Link>
       </div>
 
       <h1 className="mt-4 text-center text-white font-bold text-3xl ">
-        Register as a new user for free
+        {t('register_title')}
       </h1>
 
       <div className="mt-4 sm:mx-auto  sm:max-w-md ">
@@ -84,7 +86,7 @@ const SignupPage = () => {
                 htmlFor="name"
                 className="block text-sm font-medium text-white"
               >
-                Full Name
+                {t('full_name')}
               </label>
               <div className="mt-1">
                 <input
@@ -107,7 +109,7 @@ const SignupPage = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-white"
               >
-                Email address
+                {t('email_address')}
               </label>
               <div className="mt-1">
                 <input
@@ -130,7 +132,7 @@ const SignupPage = () => {
                 htmlFor="password"
                 className="block text-sm font-medium text-white"
               >
-                Password
+                {t('password')}
               </label>
               <div className="mt-1 relative">
                 <input
@@ -187,7 +189,7 @@ const SignupPage = () => {
                   htmlFor="file-input"
                   className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-slate-200 cursor-pointer"
                 >
-                  <span>Upload a file</span>
+                  <span>{t('upload_file')}</span>
                   <input
                     type="file"
                     name="avatar"
@@ -205,13 +207,13 @@ const SignupPage = () => {
                 type="submit"
                 className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Submit
+                {t('submit')}
               </button>
             </div>
             <div className="flex items-center w-full">
-              <h4 className="text-white">Already have an account?</h4>
+              <h4 className="text-white">{t('already_have_account')}</h4>
               <Link to="/login" className="text-blue-600 pl-2">
-                Sign In
+                {t('sign_in')}
               </Link>
             </div>
           </form>

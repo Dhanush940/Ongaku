@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import Guest from "./Guest";
 import UserSongList from "../../song/components/UserSongList";
@@ -7,6 +8,7 @@ import { loadSongs } from "../../song/songThunks";
 import type { AppDispatch, RootState } from "../../../store/store";
 
 const HomeContainer: React.FC = () => {
+  const { t } = useTranslation('home');
   const { isAuthenticated, loading } = useSelector((state: RootState) => state.user);
   const { songs } = useSelector((state: RootState) => state.songs);
   const dispatch = useDispatch<AppDispatch>();
@@ -29,7 +31,7 @@ const HomeContainer: React.FC = () => {
             <UserSongList songs={songs} />
           ) : (
             <div className="flex flex-col items-center text-white font-bold text-2xl h-full gap-2 mt-10">
-              <h1>You don&apos;t have any songs</h1>
+              <h1>{t('no_songs')}</h1>
             </div>
           )}
         </div>

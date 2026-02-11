@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlinePlus } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
 import { useDispatch } from "react-redux";
@@ -11,7 +12,8 @@ interface CreatePlaylistModalProps {
 }
 
 const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({ isOpen, onClose }) => {
-  const [inputValue, setInputValue] = useState("Untitled Playlist");
+  const { t } = useTranslation('playlist');
+  const [inputValue, setInputValue] = useState('Untitled Playlist');
   const dispatch = useDispatch<AppDispatch>();
 
   if (!isOpen) return null;
@@ -39,7 +41,7 @@ const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({ isOpen, onClo
           type="text"
           value={inputValue}
           className="bg-[#1f1f1f] rounded-md w-full focus:outline-none text-white text-sm placeholder-zinc-500"
-          placeholder="Playlist Name"
+          placeholder={t('playlist_name_placeholder')}
           autoFocus
           onFocus={(e) => e.target.select()}
           onChange={(e) => setInputValue(e.target.value)}
@@ -52,7 +54,7 @@ const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({ isOpen, onClo
         className="flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-black px-4 py-2 rounded-full font-medium active:scale-95 transition-transform"
       >
         <AiOutlinePlus size={18} />
-        <span>Create</span>
+        <span>{t('create')}</span>
       </button>
     </div>
   );

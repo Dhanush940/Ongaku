@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdLibraryMusic } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,6 +15,7 @@ import type { AppDispatch, RootState } from "../../../store/store";
  * Header and layout are provided by PlaylistLayout.
  */
 const PlaylistManager: React.FC = () => {
+  const { t } = useTranslation('playlist');
   const { isAuthenticated } = useSelector((state: RootState) => state.user);
   const { playlists } = useSelector((state: RootState) => state.playlist);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -30,14 +32,14 @@ const PlaylistManager: React.FC = () => {
     if (isAuthenticated) {
       setIsCreateModalOpen(true);
     } else {
-      toast.error("Please login to create a playlist");
+      toast.error(t('login_to_create_playlist'));
     }
   };
 
   return (
     <div className="text-white w-full h-full px-6 sm:px-14 py-5 overflow-hidden">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">Playlists</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">{t('playlists')}</h1>
         
         {/* Create Button (Top Right) */}
         {playlists?.length > 0 && (
@@ -47,7 +49,7 @@ const PlaylistManager: React.FC = () => {
               onClick={handleCreateClick}
             >
               <AiOutlinePlus size={20} />
-              <span>New Playlist</span>
+              <span>{t('new_playlist')}</span>
             </button>
             
             {/* Modal positioned relative to button or global? The original was relative. Let's make it fixed/modal for better UX */}
@@ -70,8 +72,8 @@ const PlaylistManager: React.FC = () => {
         <div className="w-full h-[60vh] flex flex-col justify-center items-center text-zinc-400 gap-6">
           <MdLibraryMusic size={120} className="text-zinc-700 animate-pulse" />
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-white mb-2">No playlists yet</h2>
-            <p className="text-zinc-500 mb-6">Create your first playlist to start building your library.</p>
+            <h2 className="text-2xl font-bold text-white mb-2">{t('no_playlists')}</h2>
+            <p className="text-zinc-500 mb-6">{t('create_first_playlist')}</p>
             
             <div className="relative">
               <button
@@ -79,7 +81,7 @@ const PlaylistManager: React.FC = () => {
                 onClick={handleCreateClick}
               >
                 <AiOutlinePlus size={24} />
-                <span>Create a new playlist</span>
+                <span>{t('create_new_playlist')}</span>
               </button>
                {/* Modal for empty state */}
                {!playlists?.length && (
