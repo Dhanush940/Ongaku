@@ -1,7 +1,6 @@
 import React, { useRef, useState, ChangeEvent, FormEvent } from "react";
 import { RxCross1 } from "react-icons/rx";
-import axios from "axios";
-import { backend_server } from "../../../config";
+import axiosInstance from "../../../api/axios";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { loadSongs } from "../../song/songThunks";
@@ -32,12 +31,10 @@ const SongUploadModal: React.FC<SongUploadModalProps> = ({ setCreate }) => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    axios
+    axiosInstance
       .post(
-        `${backend_server}/song/create-song`,
-        store,
-        { withCredentials: true }
-        // If not mentioned, cookies and all will not be passed to in the req object
+        "/song/create-song",
+        store
       )
       .then(({ data }) => {
         setStore({

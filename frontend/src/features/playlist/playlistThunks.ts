@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-import { backend_server } from "../../config";
+import { isAxiosError } from "axios";
+import axiosInstance from "../../api/axios";
 import type { Song } from "../song/types";
 import type { Playlist } from "./types";
 
@@ -30,10 +30,9 @@ export const createPlaylist = createAsyncThunk<Playlist, string, ThunkConfig>(
   "playlist/createPlaylist",
   async (playlistName, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post<PlaylistResponse>(
-        `${backend_server}/playlist/createPlaylist`,
-        { playlistName },
-        { withCredentials: true }
+      const { data } = await axiosInstance.post<PlaylistResponse>(
+        "/playlist/createPlaylist",
+        { playlistName }
       );
       
       if (!data.success || !data.playlist) {
@@ -41,7 +40,7 @@ export const createPlaylist = createAsyncThunk<Playlist, string, ThunkConfig>(
       }
       return data.playlist;
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
+      if (isAxiosError(error)) {
         return rejectWithValue(error.response?.data?.message || error.message);
       }
       return rejectWithValue("An unexpected error occurred");
@@ -53,17 +52,14 @@ export const getPlaylists = createAsyncThunk<Playlist[], void, ThunkConfig>(
   "playlist/getPlaylists",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get<PlaylistResponse>(
-        `${backend_server}/playlist/getPlaylists`, 
-        { withCredentials: true }
-      );
+      const { data } = await axiosInstance.get<PlaylistResponse>("/playlist/getPlaylists");
       
       if (!data.success || !data.playlistNames) {
         return rejectWithValue(data.message || "Failed to fetch playlists");
       }
       return data.playlistNames;
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
+      if (isAxiosError(error)) {
         return rejectWithValue(error.response?.data?.message || error.message);
       }
       return rejectWithValue("An unexpected error occurred");
@@ -75,17 +71,14 @@ export const deletePlaylist = createAsyncThunk<Playlist, Playlist, ThunkConfig>(
   "playlist/deletePlaylist",
   async (playlist, { rejectWithValue }) => {
     try {
-      const { data } = await axios.delete<PlaylistResponse>(
-        `${backend_server}/playlist/deletePlaylist/${playlist._id}`,
-        { withCredentials: true }
-      );
+      const { data } = await axiosInstance.delete<PlaylistResponse>(`/playlist/deletePlaylist/${playlist._id}`);
       
       if (!data.success || !data.deletedPlaylist) {
         return rejectWithValue(data.message || "Failed to delete playlist");
       }
       return data.deletedPlaylist;
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
+      if (isAxiosError(error)) {
         return rejectWithValue(error.response?.data?.message || error.message);
       }
       return rejectWithValue("An unexpected error occurred");
@@ -97,10 +90,9 @@ export const addSongsInPlaylist = createAsyncThunk<{playlist: Playlist, songs: S
   "playlist/addSongsInPlaylist",
   async ({ filteredSongs, playlist }, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post<PlaylistResponse>(
-        `${backend_server}/playlist/addSongs`,
-        { filteredSongs, playlist },
-        { withCredentials: true }
+      const { data } = await axiosInstance.post<PlaylistResponse>(
+        "/playlist/addSongs",
+        { filteredSongs, playlist }
       );
       
       if (!data.success || !data.data) {
@@ -108,7 +100,7 @@ export const addSongsInPlaylist = createAsyncThunk<{playlist: Playlist, songs: S
       }
       return { playlist, songs: data.data };
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
+      if (isAxiosError(error)) {
         return rejectWithValue(error.response?.data?.message || error.message);
       }
       return rejectWithValue("An unexpected error occurred");
@@ -120,10 +112,9 @@ export const renamePlaylist = createAsyncThunk<{ currentPlaylist: Playlist, upda
   "playlist/renamePlaylist",
   async ({ name, playlist }, { rejectWithValue }) => {
     try {
-      const { data } = await axios.patch<PlaylistResponse>(
-        `${backend_server}/playlist/renamePlaylist`,
-        { playlist, name },
-        { withCredentials: true }
+      const { data } = await axiosInstance.patch<PlaylistResponse>(
+        "/playlist/renamePlaylist",
+        { playlist, name }
       );
       
       if (!data.success || !data.updatedPlaylist) {
@@ -134,7 +125,7 @@ export const renamePlaylist = createAsyncThunk<{ currentPlaylist: Playlist, upda
         updatedPlaylist: data.updatedPlaylist,
       };
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
+      if (isAxiosError(error)) {
         return rejectWithValue(error.response?.data?.message || error.message);
       }
       return rejectWithValue("An unexpected error occurred");
@@ -146,10 +137,9 @@ export const removeSongFromPlaylist = createAsyncThunk<{ updatedPlaylist: Playli
   "playlist/removeSongFromPlaylist",
   async ({ playlistId, songToBeRemoved }, { rejectWithValue }) => {
     try {
-      const { data } = await axios.patch<PlaylistResponse>(
-        `${backend_server}/playlist/removeSongFromPlaylist`,
-        { playlistId, songToBeRemoved },
-        { withCredentials: true }
+      const { data } = await axiosInstance.patch<PlaylistResponse>(
+        "/playlist/removeSongFromPlaylist",
+        { playlistId, songToBeRemoved }
       );
       
       if (!data.success || !data.updatedPlaylist) {
@@ -157,7 +147,7 @@ export const removeSongFromPlaylist = createAsyncThunk<{ updatedPlaylist: Playli
       }
       return { updatedPlaylist: data.updatedPlaylist };
     } catch (error: unknown) {
-      if (axios.isAxiosError(error)) {
+      if (isAxiosError(error)) {
         return rejectWithValue(error.response?.data?.message || error.message);
       }
       return rejectWithValue("An unexpected error occurred");

@@ -1,8 +1,8 @@
 import React, { useState, FormEvent } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
-import { backend_server } from "../../../config";
+import { isAxiosError } from "axios";
+import axiosInstance from "../../../api/axios";
 import { SiMusicbrainz } from "react-icons/si";
 import { toast } from "react-toastify";
 
@@ -17,15 +17,14 @@ const ResetPasswordPage = () => {
   
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (password !== confirmPassword) { // Fixed loose equality
+    if (password !== confirmPassword) {
        toast.error(`Password and confirm password doesn't match`);
        return;
     }
-    axios
+    axiosInstance
       .post(
-        `${backend_server}/user/resetPassword`,
-        { password, token, generatedPassword },
-        { withCredentials: true }
+        "/user/resetPassword",
+        { password, token, generatedPassword }
       )
       .then((res) => {
         if (res.data.success === false) {
@@ -36,7 +35,7 @@ const ResetPasswordPage = () => {
         setGeneratedPassword("");
       })
       .catch((error: unknown) => {
-        if (axios.isAxiosError(error) && error.response?.data?.message === "Time expired") {
+        if (isAxiosError(error) && error.response?.data?.message === "Time expired") {
           toast.error("Time expired.Start the process again");
         }
       });

@@ -1,7 +1,6 @@
 import React, { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { backend_server } from "../../../config";
+import axiosInstance from "../../../api/axios";
 import { SiMusicbrainz } from "react-icons/si";
 import { toast } from "react-toastify";
 
@@ -12,11 +11,10 @@ const ForgotPasswordPage = () => {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    axios
+    axiosInstance
       .post(
-        `${backend_server}/user/forgotPassword`,
-        { fullName, email },
-        { withCredentials: true }
+        "/user/forgotPassword",
+        { fullName, email }
       )
       .then(({ data }) => {
         setEmail("");
