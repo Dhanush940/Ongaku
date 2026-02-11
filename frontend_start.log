@@ -144,3 +144,2343 @@ src/redux/actions/playlist.js
   Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
 
 webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/pages'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/pages/HomePage.js 8:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/HomePage.js 9:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/HomePage.js 10:0-44
+Module not found: Error: Can't resolve '../components/SideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/HomePage.js 11:0-52
+Module not found: Error: Can't resolve '../components/MainContent' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/PlaylistPage.js 7:0-60
+Module not found: Error: Can't resolve '../components/PlaylistSideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/PlaylistPage.js 8:0-60
+Module not found: Error: Can't resolve '../components/PlaylistContent' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 7:0-60
+Module not found: Error: Can't resolve '../components/PlaylistSideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 10:0-50
+Module not found: Error: Can't resolve '../components/SingleItem' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 12:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 13:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/pages'
+
+webpack compiled with 10 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/SignupPage' in '/app/frontend/src'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/App.js 7:0-44
+Module not found: Error: Can't resolve './pages/SignupPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 8:0-42
+Module not found: Error: Can't resolve './pages/LoginPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 9:0-60
+Module not found: Error: Can't resolve './pages/ForgotPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 12:0-52
+Module not found: Error: Can't resolve './pages/ActivationPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 15:0-48
+Module not found: Error: Can't resolve './redux/actions/user' in '/app/frontend/src'
+
+ERROR in ./src/App.js 21:0-58
+Module not found: Error: Can't resolve './pages/ResetPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/pages/HomePage.js 8:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/HomePage.js 9:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/HomePage.js 10:0-44
+Module not found: Error: Can't resolve '../components/SideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/HomePage.js 11:0-52
+Module not found: Error: Can't resolve '../components/MainContent' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/PlaylistPage.js 7:0-60
+Module not found: Error: Can't resolve '../components/PlaylistSideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/PlaylistPage.js 8:0-60
+Module not found: Error: Can't resolve '../components/PlaylistContent' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 7:0-60
+Module not found: Error: Can't resolve '../components/PlaylistSideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 10:0-50
+Module not found: Error: Can't resolve '../components/SingleItem' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 12:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 13:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/pages'
+
+ERROR in ./src/redux/store.js 4:0-46
+Module not found: Error: Can't resolve './reducers/user' in '/app/frontend/src/redux'
+
+webpack compiled with 17 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/App.js 5:0-40
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 7:0-44
+Module not found: Error: Can't resolve './pages/SignupPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 8:0-42
+Module not found: Error: Can't resolve './pages/LoginPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 9:0-60
+Module not found: Error: Can't resolve './pages/ForgotPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 12:0-52
+Module not found: Error: Can't resolve './pages/ActivationPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 15:0-48
+Module not found: Error: Can't resolve './redux/actions/user' in '/app/frontend/src'
+
+ERROR in ./src/App.js 17:0-49
+Module not found: Error: Can't resolve './redux/actions/song' in '/app/frontend/src'
+
+ERROR in ./src/App.js 21:0-58
+Module not found: Error: Can't resolve './pages/ResetPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/pages/PlaylistPage.js 7:0-60
+Module not found: Error: Can't resolve '../components/PlaylistSideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/PlaylistPage.js 8:0-60
+Module not found: Error: Can't resolve '../components/PlaylistContent' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/PlaylistPage.js 9:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 7:0-60
+Module not found: Error: Can't resolve '../components/PlaylistSideBar' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 8:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 10:0-50
+Module not found: Error: Can't resolve '../components/SingleItem' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 12:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/pages'
+
+ERROR in ./src/pages/SpecificPlaylist.js 13:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/pages'
+
+ERROR in ./src/redux/store.js 4:0-46
+Module not found: Error: Can't resolve './reducers/user' in '/app/frontend/src/redux'
+
+ERROR in ./src/redux/store.js 5:0-46
+Module not found: Error: Can't resolve './reducers/song' in '/app/frontend/src/redux'
+
+ERROR in ./src/redux/store.js 6:0-56
+Module not found: Error: Can't resolve './reducers/songStorage' in '/app/frontend/src/redux'
+
+webpack compiled with 19 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/App.js 5:0-40
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 7:0-44
+Module not found: Error: Can't resolve './pages/SignupPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 8:0-42
+Module not found: Error: Can't resolve './pages/LoginPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 9:0-60
+Module not found: Error: Can't resolve './pages/ForgotPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 12:0-52
+Module not found: Error: Can't resolve './pages/ActivationPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 15:0-48
+Module not found: Error: Can't resolve './redux/actions/user' in '/app/frontend/src'
+
+ERROR in ./src/App.js 17:0-49
+Module not found: Error: Can't resolve './redux/actions/song' in '/app/frontend/src'
+
+ERROR in ./src/App.js 18:0-48
+Module not found: Error: Can't resolve './pages/PlaylistPage' in '/app/frontend/src'
+
+ERROR in ./src/App.js 19:0-56
+Module not found: Error: Can't resolve './pages/SpecificPlaylist' in '/app/frontend/src'
+
+ERROR in ./src/App.js 20:0-56
+Module not found: Error: Can't resolve './redux/actions/playlist' in '/app/frontend/src'
+
+ERROR in ./src/App.js 21:0-58
+Module not found: Error: Can't resolve './pages/ResetPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/redux/store.js 4:0-46
+Module not found: Error: Can't resolve './reducers/user' in '/app/frontend/src/redux'
+
+ERROR in ./src/redux/store.js 5:0-46
+Module not found: Error: Can't resolve './reducers/song' in '/app/frontend/src/redux'
+
+ERROR in ./src/redux/store.js 6:0-56
+Module not found: Error: Can't resolve './reducers/songStorage' in '/app/frontend/src/redux'
+
+ERROR in ./src/redux/store.js 7:0-54
+Module not found: Error: Can't resolve './reducers/playlist' in '/app/frontend/src/redux'
+
+webpack compiled with 15 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/App.jsx 5:0-40
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 7:0-44
+Module not found: Error: Can't resolve './pages/SignupPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 8:0-42
+Module not found: Error: Can't resolve './pages/LoginPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 9:0-60
+Module not found: Error: Can't resolve './pages/ForgotPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 12:0-52
+Module not found: Error: Can't resolve './pages/ActivationPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 14:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 15:0-48
+Module not found: Error: Can't resolve './redux/actions/user' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 17:0-49
+Module not found: Error: Can't resolve './redux/actions/song' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 18:0-48
+Module not found: Error: Can't resolve './pages/PlaylistPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 19:0-56
+Module not found: Error: Can't resolve './pages/SpecificPlaylist' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 20:0-56
+Module not found: Error: Can't resolve './redux/actions/playlist' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 21:0-58
+Module not found: Error: Can't resolve './pages/ResetPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 13 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/App.jsx 5:0-40
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 7:0-44
+Module not found: Error: Can't resolve './pages/SignupPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 8:0-42
+Module not found: Error: Can't resolve './pages/LoginPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 9:0-60
+Module not found: Error: Can't resolve './pages/ForgotPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 12:0-52
+Module not found: Error: Can't resolve './pages/ActivationPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 14:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 15:0-48
+Module not found: Error: Can't resolve './redux/actions/user' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 17:0-49
+Module not found: Error: Can't resolve './redux/actions/song' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 18:0-48
+Module not found: Error: Can't resolve './pages/PlaylistPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 19:0-56
+Module not found: Error: Can't resolve './pages/SpecificPlaylist' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 20:0-56
+Module not found: Error: Can't resolve './redux/actions/playlist' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 21:0-58
+Module not found: Error: Can't resolve './pages/ResetPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 13 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/App.jsx 5:0-40
+Module not found: Error: Can't resolve './pages/HomePage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 7:0-44
+Module not found: Error: Can't resolve './pages/SignupPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 8:0-42
+Module not found: Error: Can't resolve './pages/LoginPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 9:0-60
+Module not found: Error: Can't resolve './pages/ForgotPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 12:0-52
+Module not found: Error: Can't resolve './pages/ActivationPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 14:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 15:0-48
+Module not found: Error: Can't resolve './redux/actions/user' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 17:0-49
+Module not found: Error: Can't resolve './redux/actions/song' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 18:0-48
+Module not found: Error: Can't resolve './pages/PlaylistPage' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 19:0-56
+Module not found: Error: Can't resolve './pages/SpecificPlaylist' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 20:0-56
+Module not found: Error: Can't resolve './redux/actions/playlist' in '/app/frontend/src'
+
+ERROR in ./src/App.jsx 21:0-58
+Module not found: Error: Can't resolve './pages/ResetPasswordPage' in '/app/frontend/src'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 13 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/features/auth/pages/ActivationPage.jsx 9:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/ForgotPasswordPage.jsx 8:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/LoginPage.jsx 10:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/ResetPasswordPage.jsx 9:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/SignupPage.jsx 10:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/redux/user.actions.js 4:0-46
+Module not found: Error: Can't resolve '../../config' in '/app/frontend/src/features/auth/redux'
+
+ERROR in ./src/features/music/components/Guest.jsx 6:0-39
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/MainContent.jsx 12:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 8:0-79
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 10:0-74
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 12:0-67
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPlayer.jsx 10:0-60
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 8:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 11:0-50
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 7:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 9:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/redux/song.actions.js 4:0-46
+Module not found: Error: Can't resolve '../../config' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 14:0-125
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 18:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/components/PlaylistSideBar.jsx 11:0-36
+Module not found: Error: Can't resolve './SongPopup' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/pages/PlaylistPage.jsx 9:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 8:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 10:0-50
+Module not found: Error: Can't resolve '../components/SingleItem' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 12:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 13:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 15:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/redux/playlist.actions.js 4:0-46
+Module not found: Error: Can't resolve '../../config' in '/app/frontend/src/features/playlist/redux'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 29 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/features/auth/pages/ActivationPage.jsx 9:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/ForgotPasswordPage.jsx 8:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/LoginPage.jsx 10:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/ResetPasswordPage.jsx 9:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/auth/pages/SignupPage.jsx 10:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/auth/pages'
+
+ERROR in ./src/features/music/components/Guest.jsx 6:0-39
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/MainContent.jsx 12:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 8:0-79
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 10:0-74
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 12:0-67
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPlayer.jsx 10:0-60
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 8:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 11:0-50
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 7:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 9:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 14:0-125
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 18:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/components/PlaylistSideBar.jsx 11:0-36
+Module not found: Error: Can't resolve './SongPopup' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/pages/PlaylistPage.jsx 9:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 8:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 10:0-50
+Module not found: Error: Can't resolve '../components/SingleItem' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 12:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 13:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 15:0-43
+Module not found: Error: Can't resolve '../config' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 26 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/features/music/components/Guest.jsx 6:0-39
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 8:0-79
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 10:0-74
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 12:0-67
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPlayer.jsx 10:0-60
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 11:0-50
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 7:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 9:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 14:0-125
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/components/PlaylistSideBar.jsx 11:0-36
+Module not found: Error: Can't resolve './SongPopup' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/pages/PlaylistPage.jsx 9:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 8:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 10:0-50
+Module not found: Error: Can't resolve '../components/SingleItem' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 12:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 13:0-49
+Module not found: Error: Can't resolve '../components/Layout/Loader' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 17 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/components/Loader.jsx 6:0-64
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+
+ERROR in ./src/features/music/components/Guest.jsx 6:0-39
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 8:0-79
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 10:0-74
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 12:0-67
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPlayer.jsx 10:0-60
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 11:0-50
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 7:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 14:0-125
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/components/PlaylistSideBar.jsx 11:0-36
+Module not found: Error: Can't resolve './SongPopup' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/pages/PlaylistPage.jsx 9:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 8:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 10:0-50
+Module not found: Error: Can't resolve '../components/SingleItem' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 12:0-50
+Module not found: Error: Can't resolve '../components/SongPlayer' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 16 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/components/Loader.jsx 6:0-64
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+
+ERROR in ./src/features/music/components/Guest.jsx 6:0-39
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 8:0-79
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 10:0-74
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 12:0-67
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPlayer.jsx 10:0-60
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 11:0-50
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 7:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 14:0-125
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/components/PlaylistSideBar.jsx 11:0-36
+Module not found: Error: Can't resolve './SongPopup' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/pages/PlaylistPage.jsx 9:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 8:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 14 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/components/Loader.jsx 6:0-64
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+
+ERROR in ./src/features/music/components/Guest.jsx 6:0-39
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 8:0-79
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 10:0-74
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SingleItem.jsx 12:0-67
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPlayer.jsx 10:0-60
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/components/SongPopup.jsx 11:0-50
+Module not found: Error: Can't resolve '../redux/actions/song' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/pages/HomePage.jsx 7:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/music/pages'
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/features/playlist/components/PlaylistContent.jsx 14:0-125
+Module not found: Error: Can't resolve '../redux/actions/playlist' in '/app/frontend/src/features/playlist/components'
+
+ERROR in ./src/features/playlist/pages/PlaylistPage.jsx 9:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/features/playlist/pages/SpecificPlaylist.jsx 8:0-65
+Module not found: Error: Can't resolve '../redux/actions/songStorage' in '/app/frontend/src/features/playlist/pages'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 13 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/components/Loader.jsx 6:0-64
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+
+ERROR in ./src/features/music/components/Guest.jsx 6:0-39
+Module not found: Error: Can't resolve '../data/data' in '/app/frontend/src/features/music/components'
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 4 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/components/Loader.jsx 6:0-64
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+ERROR in ./src/index.js 9:0-34
+Module not found: Error: Can't resolve './redux/store' in '/app/frontend/src'
+
+webpack compiled with 3 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/components/Loader.jsx 6:0-64
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+
+ERROR in ./src/features/music/redux/song.actions.js 5:0-50
+Module not found: Error: Can't resolve './playlist' in '/app/frontend/src/features/music/redux'
+
+webpack compiled with 2 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+WARNING in [eslint]
+src/App.js
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/App.jsx
+  Line 26:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/components/MainContent.js
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/Playing.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/components/PlaylistContent.js
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/components/SideBar.js
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/components/SingleItem.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/components/SongPlayer.js
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/components/UserSong.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/auth/pages/ActivationPage.jsx
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/auth/pages/ResetPasswordPage.jsx
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/features/music/components/MainContent.jsx
+  Line 54:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/music/components/Playing.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/components/SideBar.jsx
+  Line 6:10:  'BiSolidPlaylist' is defined but never used  no-unused-vars
+
+src/features/music/components/SingleItem.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 2:10:  'FaPause' is defined but never used    no-unused-vars
+
+src/features/music/components/SongPlayer.jsx
+  Line 43:11:  'previousSongObject' is assigned a value but never used                               no-unused-vars
+  Line 43:66:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 48:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+  Line 66:11:  'nextSongObject' is assigned a value but never used                                   no-unused-vars
+  Line 66:62:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+  Line 71:11:  Array.prototype.filter() expects a return value from arrow function                   array-callback-return
+
+src/features/music/components/UserSong.jsx
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useRef' is defined but never used     no-unused-vars
+  Line 1:36:  'useState' is defined but never used   no-unused-vars
+
+src/features/music/pages/HomePage.jsx
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/features/playlist/components/PlaylistContent.jsx
+  Line 23:11:   'loading' is assigned a value but never used                                                                                                                                                     no-unused-vars
+  Line 42:6:    React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 102:13:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/pages/PlaylistPage.jsx
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/features/playlist/pages/SpecificPlaylist.jsx
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/features/playlist/redux/playlist.actions.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+src/pages/ActivationPage.js
+  Line 6:8:   'toast' is defined but never used                                                                                    no-unused-vars
+  Line 26:6:  React Hook useEffect has a missing dependency: 'activation_token'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/HomePage.js
+  Line 1:28:  'useState' is defined but never used                                                                         no-unused-vars
+  Line 22:6:  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src/pages/PlaylistPage.js
+  Line 2:23:  'useSelector' is defined but never used  no-unused-vars
+
+src/pages/ResetPasswordPage.js
+  Line 20:18:  Expected '!==' and instead saw '!='  eqeqeq
+
+src/pages/SpecificPlaylist.js
+  Line 25:6:   React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array                                                                                      react-hooks/exhaustive-deps
+  Line 76:17:  Redundant alt attribute. Screen-readers already announce `img` tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop  jsx-a11y/img-redundant-alt
+
+src/redux/actions/playlist.js
+  Line 97:54:  Array.prototype.filter() expects a value to be returned at the end of arrow function  array-callback-return
+
+ERROR in ./src/components/Loader.jsx 6:0-64
+Module not found: Error: You attempted to import ../../Assets/background-loader.json which falls outside of the project src/ directory. Relative imports outside of src/ are not supported.
+You can either move it inside src/, or add a symlink to it from project's node_modules/.
+
+webpack compiled with 1 error and 1 warning
+Terminated

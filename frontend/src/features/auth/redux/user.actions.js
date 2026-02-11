@@ -1,0 +1,23 @@
+import axios from "axios";
+import { backend_server } from "../../../config";
+
+export const loadUser = () => async (dispatch) => {
+  try {
+    dispatch({
+      type: "LoadUserRequest",
+    });
+    const res = await axios.get(`${backend_server}/user/getuser`, {
+      withCredentials: true,
+    });
+
+    dispatch({
+      type: "LoadUserSuccess",
+      payload: res.data.user,
+    });
+  } catch (error) {
+    dispatch({
+      type: "LoadUserFail",
+      payload: error.response,
+    });
+  }
+};
